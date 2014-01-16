@@ -6,7 +6,6 @@ layout: default
 
 <ul>
 {% for page in site.pages %}
-<li>Page: {{page}}</li>
 {% if page.category == 'staff' %}
 <li><a href="{{page.url}}">{{ page.name }}</a></li>
 {% endif %}
