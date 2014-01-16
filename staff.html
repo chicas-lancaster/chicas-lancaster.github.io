@@ -5,10 +5,9 @@ layout: default
 <h1>Staff</h1>
 
 <ul>
-{% assign pagesort = site.pages | sort: 'order' %}
-{% for page in pagesort %}
+{% for page in site.pages %}
 {% if page.category == 'staff' %}
-<li><a href="{{page.url}}">{{ page.name }}{{page.order}}</a></li>
+<li><a href="{{page.url}}">{{ page.name }}</a></li>
 {% endif %}
-  {% endfor %}
+{% endfor %}
 </ul>
