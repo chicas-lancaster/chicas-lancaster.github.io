@@ -7,6 +7,13 @@ Spatial Epidemiology Links
 
 This is a list of interesting web-resources on spatial epidemiology
 
+
+Disease Resources
+-----------------
+
+* The [Malaria Atlas Project](http://www.map.ox.ac.uk/)
+
+
 Web mapping
 -----------
 
