@@ -1,0 +1,9 @@
+
+.leaflet-container  a:hover, a:focus {
+    background-color: #4d87c7;
+    color: white;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #d42b1e;
+}

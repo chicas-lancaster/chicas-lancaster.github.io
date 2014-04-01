@@ -1,0 +1,12 @@
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
+        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
+        "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
+        },
+{}
+]}

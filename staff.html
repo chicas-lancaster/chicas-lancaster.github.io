@@ -7,7 +7,7 @@ layout: default
 <ul>
 {% for page in site.pages %}
 {% if page.category == 'staff' %}
-<li><a href="{{page.url}}">{{ page.name }}</a></li>
+<li data-order="{{page.order}}"><a href="{{page.url}}">{{ page.name }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
