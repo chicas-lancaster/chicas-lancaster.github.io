@@ -43,7 +43,7 @@
 
   /* font-size: 14px; */
   body {
-    font-family: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+    font-family: "Roboto", Georgia, "Times New Roman", Times, serif;
     font-size: 87.5%;
     color: #444444;
   }
@@ -55,7 +55,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+    font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: #161e21;
     margin: 0;
