@@ -7,3 +7,12 @@
 h1, h2, h3, h4, h5, h6 {
 color: #d42b1e;
 }
+
+.tag {
+    background-color: #d1d1d1;
+    line-height: 120%;
+    padding: 3px 6px;
+    font-size: 100%;
+    margin-bottom: 5px;
+    font-family: monospace;
+}
