@@ -16,3 +16,17 @@ color: #d42b1e;
     margin-bottom: 5px;
     font-family: monospace;
 }
+
+.pagepic {
+    width: 203px;
+    margin: 0.5em 0pt 0.5em 0.8em; float:right; 
+    background-color: #EEE;
+    padding: 3px;
+    font-size: 80%;
+}
+
+.pagepic img {
+    border: 1px solid #CCCCCC;
+    vertical-align:middle;
+    margin-bottom: 3px; 
+}
