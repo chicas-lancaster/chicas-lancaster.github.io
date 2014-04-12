@@ -1,18 +1,6 @@
 { "type": "FeatureCollection",
     "features": [
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
-        "properties": {"name": "Statistical Blah", "link": "/events/forumSmith.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
-        "properties": {"name": "Statistical Banter", "link": "/events/forumOlthwaite.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
-        "properties": {"name": "Statistical Foo", "link": "/events/forumBloggs.html"}
-        },
-      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
         "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
         },
