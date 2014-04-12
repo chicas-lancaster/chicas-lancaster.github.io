@@ -82,18 +82,32 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Events</h2>
+      <div id="tables">
 
-<ul>
-<li><a href="/events/forumSmith.html">Statistical Blah</a> : John Smith from University of Poppleton</li>
-</ul>
+<div id="allevents">
+<h2>Events</h2>
+<table id="eventlist">
+<tr data-start="2014-03-17">
+<td>Monday, 17 March 2014</td>
+<td><a href="/events/forumSmith.html">Statistical Blah</a> : John Smith from University of Poppleton</td>
+</tr>
+<tr data-start="2014-04-17">
+<td>Thursday, 17 April 2014</td>
+<td><a href="/events/forumOlthwaite.html">Statistical Banter</a> : Eric Olthwaite from University of Poppleton</td>
+</tr>
+<tr data-start="2014-05-23">
+<td>Friday, 23 May 2014</td>
+<td><a href="/events/forumBloggs.html">Statistical Foo</a> : Fred Bloggs from University of Poppleton</td>
+</tr>
+</table>
+</div>
 
+</div> 
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      
-      
+            
       			
       
 
@@ -113,5 +127,25 @@
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
+ <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to loca
+l if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+<script>
+var trs = $("#eventlist tr");
+var now = new Date();
+var isfuture = trs.map(function(i,r){return new Date($(r).data('start'))>now});
+var forthcoming = $.grep(trs, function(e,i){return isfuture[i]});
+var past = $.grep(trs, function(e,i){return !isfuture[i]});
+
+$("#tables").append("<div id='coming'><h2>Coming Events</h2><table id='forth'></table></div>");
+$("#forth").append(forthcoming);
+
+$("#tables").append("<div id='past'><h2>Past Events</h2><table id='pastevents'></table></div>");
+$("#pastevents").append(past);
+
+$("#allevents").remove();
+
+</script>
 </body>
 </html>

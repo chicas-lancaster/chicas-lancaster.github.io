@@ -1,12 +1,20 @@
 { "type": "FeatureCollection",
     "features": [
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
-        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
+        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
+        "properties": {"name": "Statistical Blah", "link": "/events/forumSmith.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [-4.40010, 50.56023]},
-        "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
+        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
+        "properties": {"name": "Statistical Banter", "link": "/events/forumOlthwaite.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [Furness Lecture Theatre 5]},
+        "properties": {"name": "Statistical Foo", "link": "/events/forumBloggs.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
+        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [102.24387, 6.13298]},
@@ -15,6 +23,10 @@
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
         "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [-4.40010, 50.56023]},
+        "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
