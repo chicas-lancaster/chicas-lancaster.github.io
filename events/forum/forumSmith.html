@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Events</title>
+	<title>Lancaster Medical School - CHICAS - Statistical Blah</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,9 +65,9 @@
                 href="/news">
                 News
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="Events"
-                class="button white active events"
+                class="button white events"
                 href="/events">
                 Events
             </a>
@@ -82,40 +82,44 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Events</h2>
-<div id="tables">
-<div id="allevents">
-<h3>All Events</h3>
-<table id="eventlist">
-<tr data-start="2014-04-19">
-<td>Saturday, 19 April 2014</td>
-<td><a href="/events/party.html">Party</a> : Celebration with cake and champagne</td>
-</tr>
-<tr data-start="2014-03-17">
-<td>Monday, 17 March 2014</td>
-<td><a href="/events/forum/forumSmith.html">Statistical Blah</a> : John Smith from University of Poppleton</td>
-</tr>
-<tr data-start="2014-04-17">
-<td>Thursday, 17 April 2014</td>
-<td><a href="/events/forum/forumOlthwaite.html">Statistical Banter</a> : Eric Olthwaite from University of Poppleton</td>
-</tr>
-<tr data-start="2014-05-23">
-<td>Friday, 23 May 2014</td>
-<td><a href="/events/forum/forumBloggs.html">Statistical Foo</a> : Fred Bloggs from University of Poppleton</td>
-</tr>
-</table>
-</div>
+      <h2><a href="./">Chicas Forum</a></h2>
 
-</div> 
+<h2>Statistical Blah</h2>
+<p>
+This is a short talk...
+</p>
+
+
+
+
+
+
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      <h3>Event Series</h3>
+      <h2>Time and Place</h2>
+<table class="narrow">
+<tr><td>Start</td><td>17 March 2014 12:00</td></tr>
+ 
+<tr><td>End</td><td>17 March 2014 12:45</td></tr>
+
+<tr><td>Location</td><td>Furness Lecture Theatre 5</td></tr>
+
+</table>
+
+<h2>Add To...</h2>
 <ul>
-<li><a href="/events/forum">Chicas Forum</a></li>
+<li><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Statistical+Blah&details=John+Smith+from+University+of+Poppleton&dates=20140317T120000/20140317T124500&location=Furness+Lecture+Theatre+5&sf=true&output=xml" target="_new">Google Calendar</a></li>
+<li><a href="data:text/calendar;base64,CkJFR0lOIFZDQUxFTkRBUgoyMDE0LTAzLTE3IDEyOjAwCkVORCBWQ0FMRU5EQVIK">Other Calendars</a></li>
 </ul>
-    </div>
+
+
+      
+      			
+      
+
+          </div>
   </aside>
 </section>
     </div>
@@ -131,25 +135,5 @@
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
- <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to loca
-l if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
-<script>
-var trs = $("#eventlist tr");
-var now = new Date();
-var isfuture = trs.map(function(i,r){return new Date($(r).data('start'))>now});
-var forthcoming = $.grep(trs, function(e,i){return isfuture[i]});
-var past = $.grep(trs, function(e,i){return !isfuture[i]});
-
-$("#tables").append("<div id='coming'><h3>Coming Events</h3><table id='forth'></table></div>");
-$("#forth").append(forthcoming);
-
-$("#tables").append("<div id='past'><h3>Past Events</h3><table id='pastevents'></table></div>");
-$("#pastevents").append(past);
-
-$("#allevents").remove();
-
-</script>
 </body>
 </html>
