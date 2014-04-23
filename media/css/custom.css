@@ -30,3 +30,18 @@ color: #d42b1e;
     vertical-align:middle;
     margin-bottom: 3px; 
 }
+
+div.poster {
+   width: 45%;
+margin: 0 1em 1em 0;
+display: inline-block;
+  }
+
+div.poster h4 {
+ display: inline;
+ font-size: 100%;
+}
+
+div.poster img {
+float: right;
+}
