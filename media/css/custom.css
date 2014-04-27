@@ -32,9 +32,7 @@ color: #d42b1e;
 }
 
 div.poster {
-   width: 45%;
-margin: 0 1em 1em 0;
-display: inline-block;
+ margin: 0 1em;
   }
 
 div.poster h4 {
@@ -43,5 +41,5 @@ div.poster h4 {
 }
 
 div.poster img {
-float: right;
+width: 80%;
 }
