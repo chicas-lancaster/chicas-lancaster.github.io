@@ -43,3 +43,5 @@ div.poster h4 {
 div.poster img {
 width: 80%;
 }
+
+header a:hover {background: white}
