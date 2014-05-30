@@ -1,12 +1,8 @@
 { "type": "FeatureCollection",
     "features": [
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [102.24387, 6.13298]},
-        "properties": {"name": "Predicting Stroke", "link": "/projects/stroke.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
-        "properties": {"name": "Loa-loa modelling", "link": "/projects/loaloa.html"}
+        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
+        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
@@ -17,8 +13,12 @@
         "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
-        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
+        "geometry": {"type": "Point", "coordinates": [102.24387, 6.13298]},
+        "properties": {"name": "Predicting Stroke", "link": "/projects/stroke.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
+        "properties": {"name": "Loa-loa modelling", "link": "/projects/loaloa.html"}
         },
 {}
 ]}
