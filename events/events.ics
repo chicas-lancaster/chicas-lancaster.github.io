@@ -10,15 +10,6 @@ END:VEVENT
 
 
 BEGIN:VEVENT
-UID:07ea26f7cb552fb13cf2ac43dc82335a@chicas
-DTSTART:20140314T120000
-DTEND:20140314T124500
-SUMMARY:Katie Owers
-DESCRIPTION:Applying spatial and spatio-temporal modeling techniques to leptospirosis in Thailand.
-END:VEVENT
-
-
-BEGIN:VEVENT
 UID:4b35f00dec6c31e24830a3a7d5ce263c@chicas
 DTSTART:20140319T120000
 DTEND:20140319T124500
@@ -42,6 +33,15 @@ DTSTART:20140212T120000
 DTEND:20140212T124500
 SUMMARY:Paula Moraga
 DESCRIPTION:Leptospirosis Incidence in urban slum communities in Brazil
+END:VEVENT
+
+
+BEGIN:VEVENT
+UID:07ea26f7cb552fb13cf2ac43dc82335a@chicas
+DTSTART:20140314T120000
+DTEND:20140314T124500
+SUMMARY:Katie Owers
+DESCRIPTION:Applying spatial and spatio-temporal modeling techniques to leptospirosis in Thailand.
 END:VEVENT
 
 
