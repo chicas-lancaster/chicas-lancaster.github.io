@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Irene Larbi</title>
+	<title>Lancaster Medical School - CHICAS - Calendar</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,9 @@
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
+
+<link rel='stylesheet' href="/media/css/fullcalendar.css" />
+
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -55,9 +58,9 @@
                 href="/projects">
                 Projects
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="People"
-                class="button white active people"
+                class="button white people"
                 href="/people">
                 People
             </a>
@@ -67,9 +70,9 @@
                 href="/news">
                 News
             </a>
-        </li>        <li class="">
+        </li>        <li class="active">
             <a title="Events"
-                class="button white events"
+                class="button white active events"
                 href="/events">
                 Events
             </a>
@@ -91,59 +94,16 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Irene Larbi</h2>
-<p>
-Irene is investigating the epidemiology of schistosomiasis.
+      <h2>Calendar</h2>
 
-</p>
+<div id="calendar">
+</div>
+
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   </aside>
 </section>
@@ -160,5 +120,29 @@ Irene is investigating the epidemiology of schistosomiasis.
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
+<script src="/media/js/libs/jquery.min.js"></script>
+<script src="/media/js/libs/moment.min.js"></script>
+<script src="/media/js/libs/fullcalendar.min.js"></script>
+<script type='text/javascript' src="/media/js/libs/gcal.js"></script>
+<script>
+$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+events: {
+            url: 'https://www.google.com/calendar/feeds/uk__en_gb%40holiday.calendar.google.com/public/basic',
+            className: 'gcal-event'
+        },
+header: {
+    left:   'title',
+    center: '',
+    right:  'today prev,next month basicWeek'
+}
+        // put your options and callbacks here
+    })
+
+});
+</script>
 </body>
 </html>
