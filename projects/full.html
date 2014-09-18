@@ -79,7 +79,7 @@
 
 <form class="ym-searchform" action="http://www.google.com/search" method="get">				
 	<input class="ym-searchfield" type="text" maxlength="40" name="q"  value="">
-	<input type="hidden" value="chicas-lancaster.github.io" name="sitesearch">	
+	<input type="hidden" value="chicas.lancaster-university.uk" name="sitesearch">	
 	<input class="ym-searchbutton"  type="submit" value="go">
 </form>
     </div>
@@ -94,6 +94,133 @@
       <h2>Current Projects</h2>
 
 <ul>
+<h3>Alder Hey Hospital Prediction : Predicting emergency admissions in a children's hospital</h3>
+
+<pre>
+---
+title: Alder Hey Hospital Prediction
+description: Predicting emergency admissions in a children's hospital
+people:
+ - rowlings
+ - moraga
+ - diggle
+tags:
+ - time_series
+ - nhs
+ - forecasting
+map:  -2.898476278359631, 53.420175096345801
+links:
+ - url: http://www.alderhey.co.uk/
+   description: Alder Hey Hospital
+ - url: http://www.maths.lancs.ac.uk/~rowlings/Chicas/AlderHey/
+   description: Demo site with simulated data
+image:
+ name: alderhey.png
+ caption: Web site showing forecasted admissions with prediction intervals
+---
+
+<p>
+Alder Hey Children's Hospital's existing method for forecasting
+admissions was based on admission counts in previous years - a bit
+like trying to predict tomorrow's weather based on the weather a year
+ago. We know it will be roughly right, but won't recognise that we
+have "hot spells" or "cold spells" of weather away from the norm that
+last a few days. Similarly, but for unknown reasons, admission numbers
+show fluctuations away from the simple forecast model the hospital was
+using.
+</p>
+
+<p>
+We constructed a statistical forecasting system that uses the
+historical data to get the average behaviour and modulates its
+predictions based on recent data, producing forecasts that are more
+accurate and have an associated measure of precision.
+</p>
+
+<p>
+The daily predictions are delivered via an interactive web site
+accessible to hospital staff only. You can view
+the <a href="http://www.maths.lancs.ac.uk/~rowlings/Chicas/AlderHey/">demo site</a>
+which uses simulated data only.
+</p>
+</pre>
+<h3>Meningitis Forecasting : Watching out for epidemics in Africa</h3>
+
+<pre>
+---
+title: Meningitis Forecasting
+description: Watching out for epidemics in Africa
+people: 
+  - taylor
+  - diggle
+  - agier
+  - rowlings
+tags:
+  - spatial
+  - africa
+  - meningitis
+image:
+  name: meningitis.png
+  caption: Typical monthly pattern of incidence across the belt (from WHO)
+links:
+  - url: http://www.meningvax.org/epidemic-updates.php
+    description: WHO Meningitis Vaccine Project updates
+map: 6.172669456464479, 15.267395668554396
+---
+<p>
+Meningitis is a major health problem across a wide swath of Africa, the so-called "Meningitis Belt".
+Within this belt, intense localised outbreaks of meningitis can occur. The current vaccination 
+strategy is reactive, treating areas when prevalence hits a threshold. We aim to produce a 
+predictive model that could direct vaccination schemes to areas of high epidemic probability.
+Our method uses dynamic regression models in space and time to produce predictions of the
+meningitis rate.
+</p>
+<p>
+There is also concern that climate change is causing the belt to spread, affecting new
+populations across Africa.
+</p>
+</pre>
+<h3>Genetics of Bovine TB : MRC-finded research into the spatial genetics of Bovine TB</h3>
+
+<pre>
+---
+title: Genetics of Bovine TB
+description: MRC-finded research into the spatial genetics of Bovine TB
+people:
+ - diggle
+ - taylor
+map: -4.40010, 50.56023
+---
+<p>
+Bovine tuberculosis is a major problem for UK cattle-farming, with
+especially high prevalence
+in the South-West of
+England. Describing the
+geographical patterning of
+different genotypic strains
+of the disease-causing
+organism contributes to
+our understanding of 
+disease-causing
+mechanisms.
+</p>
+</pre>
+<h3>Giardia/Cryptosporidium Study : Assessing risk factors for Giardia and Cryptosporidium</h3>
+
+<pre>
+---
+title: Giardia/Cryptosporidium Study
+description: Assessing risk factors for Giardia and Cryptosporidium
+people:
+ - reeve
+ - keegan
+ - diggle
+---
+<p>
+Giardia and Cryptosporidium are parasites and a common cause of gastrointestinal illness in humans.
+This study investigates several risk factors for these conditions, including water source. Collaboration with PHE
+</p>
+</pre>
 <h3>Predicting Stroke : Population predictors for stroke risk in Kelantan, Malaysia.</h3>
 
 <pre>
@@ -109,6 +236,57 @@ map: 102.24387, 6.13298
 ---
 <p>
 This project involves modelling to discover population predictors of incidence and outcome of stroke in Kelantan, Malaysia 
+</p>
+</pre>
+<h3>AEGISS 2 : Real-time surveillance modelling</h3>
+
+<pre>
+---
+title: AEGISS 2
+description: Real-time surveillance modelling
+people:
+ - diggle
+ - rowlings
+ - hale
+tags:
+ - spatial
+ - surveillance
+image:
+  name: aegiss2.png
+  caption: Surveillance web site mapping relative risk rates.
+---
+<p>
+Mapping relative risk from point data. 
+</p>
+</pre>
+<h3>Loa-loa modelling : Identifying high-risk areas for LF treatment</h3>
+
+<pre>
+---
+title: Loa-loa modelling
+description: Identifying high-risk areas for LF treatment
+people:
+ - rowlings
+ - diggle
+links:
+ - url: http://www.maneyonline.com/doi/abs/10.1179/136485913X13789813917463
+   description: Paper in Annals of Tropical Medicine and Parasitology
+map: 14.24978, 6.78890
+image: 
+   name: loaloa.png
+   caption: Showing exceedence thresholds in Google Earth
+---
+<p>
+The treatment for lymphatic filariasis can cause dangerous side-effects if
+the individual is also infected with the loa-loa parasite.
+Surveying loa­loa prevalence in remote
+villages can be
+expensive, but
+by combining 
+techniques we
+can optimise
+precision for a
+given cost.
 </p>
 </pre>
 <h3>Health e-Research Centre : MRC-funded research into new techniques in health resesarch</h3>
@@ -161,35 +339,20 @@ focussed specifically on a range of cancers and all cause and infant mortality. 
 with the HPA.
 </p>
 </pre>
-<h3>Campylobacter Transmission : A better understanding of Campylobacter in humans</h3>
+<h3>Brazilian Leptospirosis Study : Ecoepidemiology of leptospirosis in the urban slums of Brazil</h3>
 
 <pre>
 ---
-title: Campylobacter Transmission
-description: A better understanding of Campylobacter in humans
+title: Brazilian Leptospirosis Study
+description: Ecoepidemiology of leptospirosis in the urban slums of Brazil
 people:
- - smith
  - diggle
 tags:
  - spatial
-image:
-  name: campy.png
-  caption: Campylobacter incidence.
+ - leptospirosis
 ---
 <p>
-Campylobacter is the most common bacterial cause of reported 
-gastrointestinal illness in England and Wales.  While food-borne 
-transmission is a major cause of these infections, a large proportion
-of cases have no known origin.  The overall aims of this project are 
-to identify the key reservoirs, environmental and social drivers of 
-Campylobacter that affect human disease, analyse seasonal variations 
-in pathogen load and their impacts on exposure and disease, understand
-the relative roles of the transmission pathways and thus points of control,
-and generate future projections of disease risk and its control.  
-</p>
-<p>
-To accomplish these goals, we are developing more sophisticated methodologies
-for the integrated analysis of multiple datasets recorded at different spatio-temporal resolutions
+Rats, slums, disease etc
 </p>
 </pre>
 <h3>Bluetongue mapping : BBSRC-funded study into bluetongue disease vectors in the UK</h3>
@@ -228,162 +391,35 @@ The project is being led by staff from the Liverpool Vet School, with Chicas
 working on the spatial analysis part of the project.
 </p>
 </pre>
-<h3>Giardia/Cryptosporidium Study : Assessing risk factors for Giardia and Cryptosporidium</h3>
+<h3>Campylobacter Transmission : A better understanding of Campylobacter in humans</h3>
 
 <pre>
 ---
-title: Giardia/Cryptosporidium Study
-description: Assessing risk factors for Giardia and Cryptosporidium
+title: Campylobacter Transmission
+description: A better understanding of Campylobacter in humans
 people:
- - reeve
- - keegan
- - diggle
----
-<p>
-Giardia and Cryptosporidium are parasites and a common cause of gastrointestinal illness in humans.
-This study investigates several risk factors for these conditions, including water source. Collaboration with PHE
-</p>
-</pre>
-<h3>Loa-loa modelling : Identifying high-risk areas for LF treatment</h3>
-
-<pre>
----
-title: Loa-loa modelling
-description: Identifying high-risk areas for LF treatment
-people:
- - rowlings
- - diggle
-links:
- - url: http://www.maneyonline.com/doi/abs/10.1179/136485913X13789813917463
-   description: Paper in Annals of Tropical Medicine and Parasitology
-map: 14.24978, 6.78890
-image: 
-   name: loaloa.png
-   caption: Showing exceedence thresholds in Google Earth
----
-<p>
-The treatment for lymphatic filariasis can cause dangerous side-effects if
-the individual is also infected with the loa-loa parasite.
-Surveying loa­loa prevalence in remote
-villages can be
-expensive, but
-by combining 
-techniques we
-can optimise
-precision for a
-given cost.
-</p>
-</pre>
-<h3>Alder Hey Hospital Prediction : Predicting emergency admissions in a children's hospital</h3>
-
-<pre>
----
-title: Alder Hey Hospital Prediction
-description: Predicting emergency admissions in a children's hospital
-people:
- - rowlings
- - moraga
- - diggle
-tags:
- - time_series
- - nhs
- - forecasting
-map:  -2.898476278359631, 53.420175096345801
-links:
- - url: http://www.alderhey.co.uk/
-   description: Alder Hey Hospital
- - url: http://www.maths.lancs.ac.uk/~rowlings/Chicas/AlderHey/
-   description: Demo site with simulated data
-image:
- name: alderhey.png
- caption: Web site showing forecasted admissions with prediction intervals
----
-
-<p>
-Alder Hey Children's Hospital's existing method for forecasting
-admissions was based on admission counts in previous years - a bit
-like trying to predict tomorrow's weather based on the weather a year
-ago. We know it will be roughly right, but won't recognise that we
-have "hot spells" or "cold spells" of weather away from the norm that
-last a few days. Similarly, but for unknown reasons, admission numbers
-show fluctuations away from the simple forecast model the hospital was
-using.
-</p>
-
-<p>
-We constructed a statistical forecasting system that uses the
-historical data to get the average behaviour and modulates its
-predictions based on recent data, producing forecasts that are more
-accurate and have an associated measure of precision.
-</p>
-
-<p>
-The daily predictions are delivered via an interactive web site
-accessible to hospital staff only. You can view
-the <a href="http://www.maths.lancs.ac.uk/~rowlings/Chicas/AlderHey/">demo site</a>
-which uses simulated data only.
-</p>
-</pre>
-<h3>Brazilian Leptospirosis Study : Ecoepidemiology of leptospirosis in the urban slums of Brazil</h3>
-
-<pre>
----
-title: Brazilian Leptospirosis Study
-description: Ecoepidemiology of leptospirosis in the urban slums of Brazil
-people:
+ - smith
  - diggle
 tags:
  - spatial
- - leptospirosis
----
-<p>
-Rats, slums, disease etc
-</p>
-</pre>
-<h3>AEGISS 2 : Real-time surveillance modelling</h3>
-
-<pre>
----
-title: AEGISS 2
-description: Real-time surveillance modelling
-people:
- - diggle
- - rowlings
- - hale
-tags:
- - spatial
- - surveillance
 image:
-  name: aegiss2.png
-  caption: Surveillance web site mapping relative risk rates.
+  name: campy.png
+  caption: Campylobacter incidence.
 ---
 <p>
-Mapping relative risk from point data. 
+Campylobacter is the most common bacterial cause of reported 
+gastrointestinal illness in England and Wales.  While food-borne 
+transmission is a major cause of these infections, a large proportion
+of cases have no known origin.  The overall aims of this project are 
+to identify the key reservoirs, environmental and social drivers of 
+Campylobacter that affect human disease, analyse seasonal variations 
+in pathogen load and their impacts on exposure and disease, understand
+the relative roles of the transmission pathways and thus points of control,
+and generate future projections of disease risk and its control.  
 </p>
-</pre>
-<h3>Genetics of Bovine TB : MRC-finded research into the spatial genetics of Bovine TB</h3>
-
-<pre>
----
-title: Genetics of Bovine TB
-description: MRC-finded research into the spatial genetics of Bovine TB
-people:
- - diggle
- - taylor
-map: -4.40010, 50.56023
----
 <p>
-Bovine tuberculosis is a major problem for UK cattle-farming, with
-especially high prevalence
-in the South-West of
-England. Describing the
-geographical patterning of
-different genotypic strains
-of the disease-causing
-organism contributes to
-our understanding of 
-disease-causing
-mechanisms.
+To accomplish these goals, we are developing more sophisticated methodologies
+for the integrated analysis of multiple datasets recorded at different spatio-temporal resolutions
 </p>
 </pre>
 <h3>Partial Likelihood for Space-Time Models : Developing methods for space-time point process models</h3>
@@ -406,42 +442,6 @@ events conditional on the past events. This occurs naturally in such
 diverse areas as infectious disease models or patterns of birds choosing
 nest locations on 
 a finite habitat.
-</p>
-</pre>
-<h3>Meningitis Forecasting : Watching out for epidemics in Africa</h3>
-
-<pre>
----
-title: Meningitis Forecasting
-description: Watching out for epidemics in Africa
-people: 
-  - taylor
-  - diggle
-  - agier
-  - rowlings
-tags:
-  - spatial
-  - africa
-  - meningitis
-image:
-  name: meningitis.png
-  caption: Typical monthly pattern of incidence across the belt (from WHO)
-links:
-  - url: http://www.meningvax.org/epidemic-updates.php
-    description: WHO Meningitis Vaccine Project updates
-map: 6.172669456464479, 15.267395668554396
----
-<p>
-Meningitis is a major health problem across a wide swath of Africa, the so-called "Meningitis Belt".
-Within this belt, intense localised outbreaks of meningitis can occur. The current vaccination 
-strategy is reactive, treating areas when prevalence hits a threshold. We aim to produce a 
-predictive model that could direct vaccination schemes to areas of high epidemic probability.
-Our method uses dynamic regression models in space and time to produce predictions of the
-meningitis rate.
-</p>
-<p>
-There is also concern that climate change is causing the belt to spread, affecting new
-populations across Africa.
 </p>
 </pre>
 </ul>
@@ -489,5 +489,17 @@ Assessing measurement error in tooth length using radiographic imaging technique
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54943285-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>
