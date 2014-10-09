@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Daniela Schlueter</title>
+	<title>Lancaster Medical School - CHICAS - Calendar</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,9 @@
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
+
+<link rel='stylesheet' href="/media/css/fullcalendar.css" />
+
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -55,9 +58,9 @@
                 href="/projects">
                 Projects
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="People"
-                class="button white active people"
+                class="button white people"
                 href="/people">
                 People
             </a>
@@ -91,79 +94,16 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Daniela Schlueter</h2>
-<p>
-<p>
-I am interested in statistical methods for longitudal and spatial data analysis
-and particularly their application to biomedical and health-related problems.
-Currently I am involved in intensity modelling of the Loa Loa parasite in western and central Africa and I am
-part of the project team for developing a new medical device to detect knee osteoarthritis.
-</p>
+      <h2>Calendar</h2>
 
-</p>
+<div id="calendar">
+</div>
+
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
       
-
-<div class="profilepic">
-<img src="/media/images/people/profile_schlueter.jpg">
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Projects</h2>
-<ul>
-<li><a href="/projects/loaloa.html">Loa-loa modelling</a></li>
-<li><a href="/projects/noisyknees.html">Noisy Knees</a></li>
-</ul>
-
-
-
     </div>
   </aside>
 </section>
@@ -180,6 +120,30 @@ part of the project team for developing a new medical device to detect knee oste
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
+<script src="/media/js/libs/jquery.min.js"></script>
+<script src="/media/js/libs/moment.min.js"></script>
+<script src="/media/js/libs/fullcalendar.min.js"></script>
+<script type='text/javascript' src="/media/js/libs/gcal.js"></script>
+<script>
+$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+events: {
+            url: 'https://www.google.com/calendar/feeds/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic',
+            className: 'gcal-event'
+        },
+header: {
+    left:   'title',
+    center: '',
+    right:  'today prev,next month basicWeek'
+}
+        // put your options and callbacks here
+    })
+
+});
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

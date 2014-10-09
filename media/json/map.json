@@ -5,10 +5,6 @@
         "properties": {"name": "Predicting Stroke", "link": "/projects/stroke.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
-        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
-        },
-      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
         "properties": {"name": "Loa-loa modelling", "link": "/projects/loaloa.html"}
         },
@@ -19,6 +15,10 @@
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
         "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
+        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
         },
 {}
 ]}
