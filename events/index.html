@@ -141,18 +141,19 @@ $(document).ready(function() {
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-events: {
-            url: 'https://www.google.com/calendar/feeds/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic',
+	googleCalendarApiKey: 'AIzaSyAB1Jd-Jf3U-R84BJzJAPTIYZZmM1sqtjs',
+	events: {
+	    googleCalendarId: 'e8j7bjqajiblsstfcc59iimss0@group.calendar.google.com',
             className: 'gcal-event'
         },
-header: {
-    left:   'title',
-    center: '',
-    right:  'today prev,next month basicWeek'
-}
+	header: {
+	    left:   'title',
+	    center: '',
+	    right:  'today prev,next month basicWeek'
+	}
         // put your options and callbacks here
     })
-
+    
 });
 </script>
 
