@@ -110,3 +110,10 @@ div .project .description{
 div .project img {
     float: right;
 }
+
+div .project p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
