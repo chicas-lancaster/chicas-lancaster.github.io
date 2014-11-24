@@ -14,10 +14,7 @@
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-<style>
-#map {height: 200px}
-</style>
+<link rel="stylesheet" href="/media/css/jquery.bxslider.css" />
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -33,11 +30,11 @@
 
 <header>
   <div class="ym-wrapper ym-clearfix">
-    <div class="ym-wbox">
+    <div class="ym-wbox" id="headerbox">
       <a href="/">
 	<img alt="CHICAS" src="/media/images/logo/clogo.png"  /> 
       </a>
-      <a href="http://lancaster.ac.uk/"><img alt="Health and Medicine, Lancaster University" src="/media/images/logo/lulogo.png" style="float:right" /></a>
+      <a href="http://www.lancaster.ac.uk/shm/divisions/med/"><img alt="Health and Medicine, Lancaster University" src="/media/images/logo/lulogo.png" style="float:right" /></a>
     </div>
   </div>
 </header>
@@ -94,26 +91,34 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <p>
-CHICAS (Combining Health Information, Computation And Statistics) is a research group of statisticians and epidemiologists in the Lancaster Medical School. The aims of the group are:
-<ul>
-<li>to develop new statistical and epidemiological methodology motivated by, and applied to,
-substantive research problems in the population health sciences;</li>
-<li>to train future researchers at the interface between statistics and population health sciences;</li>
-<li>to collaborate with researchers in the biomedical and health sciences.</li>
+      <ul class="bxslider">
+<li>
+<img src="/media/images/slider/snowmap2.jpg" title="We are a research group of statisticians and epidemiologists in the Lancaster Medical School" />
+</li>
+<li>
+<img src="/media/images/slider/world2.jpg" title="We develop new methodology for substantive research problems in the population health sciences" />
+</li>
+<li>
+<img src="/media/images/slider/workshop2.jpg" title="We train researchers at the interface between statistics and population health sciences" />
+</li>
+<li>
+<img src="/media/images/slider/arrows2.jpg" title="We collaborate with researchers in the biomedical and health sciences." />
+</li>
 </ul>
-</p>
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      <h3>Locations</h3>
-<div id="map"></div>
-<p>View <a href="map.html">this map</a> on a page</p>
+      <h4>Latest News</h4>
+ <p>
+We recently deployed a real-time admissions forecasting system for a leading children's hospital. Our statistical
+methods perform better than existing predictive methods and help in efficient resource planning.</p>
+<p><a class="ym-button ym-next" href="news/hospital_predictions_deployed.html">Read More</a></p>
+
     </div>
   </aside>
 </section>
-<section class="box info">
+<section class="box info" id="threebox">
   <div class="ym-grid linearize-level-1">
     <div class="ym-g66 ym-gl">
       <div class="ym-grid linearize-level-2">
@@ -130,11 +135,13 @@ substantive research problems in the population health sciences;</li>
 	</article>
 	<article class="ym-g50 ym-gr">
 	  <div class="ym-gbox">
-	    <h4>Latest News</h4>
-	    <p>
-	      We recently deployed a real-time admissions forecasting system for a leading children's hospital. Our statistical
-	      methods perform better than existing predictive methods and help in efficient resource planning.</p>
-	    <p><a class="ym-button ym-next" href="news/hospital_predictions_deployed.html">Read More</a></p>
+<h4>Locations</h4>
+<div id="maplink">
+  <img id="locationthumb" src="/media/images/graphics/location.png"/>
+  <div id="locationcaption">
+The <a href="/map.html">project map</a> shows our global connections.
+  </div>
+</div>
 	  </div>
 	</article>
       </div>
@@ -178,40 +185,24 @@ substantive research problems in the population health sciences;</li>
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js">\x3C/script>')</script>
+
+
+<script src="/media/js/libs/jquery.bxslider.js"></script>
 <script>
-
-function createMap(){
- var map = L.map('map').setView([20, 0], 2);
- var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 18
- });
- var sMap = L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
- attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
- '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
- 'Map data {attribution.OpenStreetMap}',
- maxZoom: 16, minZoom: 2
- });
- sMap.addTo(map);
- $.getJSON("/media/json/map.json", function(data) {
-    var geojson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup("<a class=\"mapfeature\" href='"+feature.properties.link+"'>"+feature.properties.name+"</a>");
-      }
-    });
-    geojson.addTo(map);
-  });
-};
-
-$(document).ready(createMap);
-
-
+$(document).ready(function(){
+  $('.bxslider').bxSlider(
+  {captions: true,
+  mode: "fade",
+  speed: 1000,
+  pause: 6000,
+  pager: false,
+   auto: true});
+});
 </script>
 
 <script>

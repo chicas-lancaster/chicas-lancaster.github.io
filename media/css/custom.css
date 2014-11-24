@@ -45,3 +45,68 @@ width: 80%;
 }
 
 header a:hover {background: white}
+
+#headerbox {padding: 0.5em 1em 0.5em 1em}
+
+#threebox {border-bottom-right-radius: 40px}
+
+#maplink {
+    position:relative;
+    height: 150px;
+}
+
+#locationthumb {
+    border-bottom-right-radius: 2em;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 100%}
+
+#locationcaption {
+    border-bottom-right-radius: 1em;
+    background-color: rgba(255,255,255,0.5);
+    top: 0.5em;
+    left: 0.5em;
+    
+    position: absolute;
+    z-index: 100;
+    width: 75%;
+}
+
+div #projects {
+    padding-bottom: 2em;
+}
+
+div.projectbox {
+    width: 32%;
+    padding: 0;
+    padding-bottom: 0.5em;
+    margin: 0;
+}
+
+div .project {
+    border: 1px solid #B5121B;
+    border-bottom-right-radius: 1em;
+    padding: 0.5em;
+    }
+
+@media screen and (max-width: 620px) {
+    /* small screens, two across */
+  div .projectbox { width: 44%; }
+}
+div .project .title {
+    font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
+    color: #B5121B;
+}
+
+div .project:hover {
+    background-color: rgba(255, 241, 241, 1);
+}
+
+div .project .description{
+    color: black;
+}
+
+div .project img {
+    float: right;
+}
