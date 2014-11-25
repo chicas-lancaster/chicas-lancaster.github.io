@@ -109,6 +109,8 @@ div .project .description{
 
 div .project img {
     float: right;
+    margin: 0.25em 0 0em 0.5em;
+    border-bottom-right-radius: 1em;
 }
 
 div .project p {
@@ -116,4 +118,6 @@ div .project p {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    font-size: 90%;
+    margin-bottom: 0;
 }

@@ -392,67 +392,67 @@
 	  <label for="all">(all projects)</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-africa" data-tag=".tag-africa"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-africa" data-tag="tag-africa"/>
 	  <label for="tag-africa">africa</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-asia" data-tag=".tag-asia"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-asia" data-tag="tag-asia"/>
 	  <label for="tag-asia">asia</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-brazil" data-tag=".tag-brazil"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-brazil" data-tag="tag-brazil"/>
 	  <label for="tag-brazil">brazil</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-europe" data-tag=".tag-europe"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-europe" data-tag="tag-europe"/>
 	  <label for="tag-europe">europe</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-forecasting" data-tag=".tag-forecasting"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-forecasting" data-tag="tag-forecasting"/>
 	  <label for="tag-forecasting">forecasting</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-malaria" data-tag=".tag-malaria"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-malaria" data-tag="tag-malaria"/>
 	  <label for="tag-malaria">malaria</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-malaysia" data-tag=".tag-malaysia"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-malaysia" data-tag="tag-malaysia"/>
 	  <label for="tag-malaysia">malaysia</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-nhs" data-tag=".tag-nhs"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-nhs" data-tag="tag-nhs"/>
 	  <label for="tag-nhs">nhs</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-portugal" data-tag=".tag-portugal"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-portugal" data-tag="tag-portugal"/>
 	  <label for="tag-portugal">portugal</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-south_america" data-tag=".tag-south_america"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-south_america" data-tag="tag-south_america"/>
 	  <label for="tag-south_america">south_america</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-spatial" data-tag=".tag-spatial"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-spatial" data-tag="tag-spatial"/>
 	  <label for="tag-spatial">spatial</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-sri_lanka" data-tag=".tag-sri_lanka"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-sri_lanka" data-tag="tag-sri_lanka"/>
 	  <label for="tag-sri_lanka">sri_lanka</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-surveillance" data-tag=".tag-surveillance"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-surveillance" data-tag="tag-surveillance"/>
 	  <label for="tag-surveillance">surveillance</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-time_series" data-tag=".tag-time_series"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-time_series" data-tag="tag-time_series"/>
 	  <label for="tag-time_series">time_series</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-uk" data-tag=".tag-uk"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-uk" data-tag="tag-uk"/>
 	  <label for="tag-uk">uk</label>
 	</div>
 		<div>
-	  <input class="tagfilter" type="radio" name="tags" id="tag-zoonosis" data-tag=".tag-zoonosis"/>
+	  <input class="tagfilter" type="radio" name="tags" id="tag-zoonosis" data-tag="tag-zoonosis"/>
 	  <label for="tag-zoonosis">zoonosis</label>
 	</div>
 	      </div>
@@ -504,9 +504,28 @@ $container.isotope({
 });
 
 $('input.tagfilter').on('change', function(){
-    var data = $(this).data('tag');
-    $('#projects').isotope({filter: data});
+    var data = $(this).data('tag').slice(4);
+    location.hash=data;
+    if( data == "" ){
+        $('#projects').isotope({filter: ""});
+    }else{
+        $('#projects').isotope({filter: ".tag-"+data});
+    }
  });
+
+window.onpopstate = function(event){
+ var iid;
+ if(location.hash == ""){
+   $('#projects').isotope({filter: ""});
+   iid = "all";
+ }else{
+   $('#projects').isotope({filter: ".tag-"+location.hash.slice(1)});
+   iid = "tag-"+location.hash.slice(1);
+ };
+ $('input#'+iid).prop("checked",true);
+
+};
+
 
 });
 </script>
