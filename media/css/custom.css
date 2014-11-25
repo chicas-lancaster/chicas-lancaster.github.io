@@ -93,7 +93,13 @@ div .project {
 @media screen and (max-width: 620px) {
     /* small screens, two across */
   div .projectbox { width: 44%; }
+img#unilogo {width: 290px;}
 }
+
+@media screen and (max-width: 500px){
+img#unilogo {width: 200px;}
+}
+
 div .project .title {
     font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
     color: #B5121B;
