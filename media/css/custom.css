@@ -15,6 +15,11 @@ color: #b5121b
     font-size: 100%;
     margin-bottom: 5px;
     font-family: monospace;
+    color: #4d87c7;
+}
+
+label span.tag:hover {
+    text-decoration: underline;
 }
 
 .pagepic {
