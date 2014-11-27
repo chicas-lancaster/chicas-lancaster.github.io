@@ -120,6 +120,7 @@ to get a link to more information.
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<script src="/media/js/libs/Leaflet.Geodesic.min.js"></script>
 
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
@@ -128,26 +129,47 @@ to get a link to more information.
 <script>
 
 function createMap(){
- var map = L.map('map').setView([20, 0], 2);
- var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 18
- });
- var sMap = L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
- attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
- '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
- 'Map data {attribution.OpenStreetMap}',
- maxZoom: 16, minZoom: 2
- });
- sMap.addTo(map);
- $.getJSON("/media/json/map.json", function(data) {
-    var geojson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup("<a class=\"mapfeature\" href='"+feature.properties.link+"'>"+feature.properties.name+"</a>");
-      }
-    });
-    geojson.addTo(map);
+var map = L.map('map').setView([20, 0], 2);
+var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+  maxZoom: 18
   });
+var sMap = L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+	'<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
+	'Map data {attribution.OpenStreetMap}',
+    maxZoom: 16, minZoom: 2
+});
+sMap.addTo(map);
+
+var POIs;
+
+$.getJSON("/media/json/map.json", function(data) {
+    POIs = L.geoJson(data, {
+	onEachFeature: function (feature, layer) {
+            layer.bindPopup("<a class=\"mapfeature\" href='"+feature.properties.link+"'>"+feature.properties.name+"</a>");
+	}
+    });
+    POIs.addTo(map);
+        
+    var Geodesic = L.geodesic([], {
+	weight: 3, 
+	opacity: 0.5,
+	color: '#B5121B',
+	steps: 50
+    }).addTo(map);
+    
+    var uni = new L.LatLng(54.010278,-2.785556);
+    var gds = [];
+    
+    for (var i = 0; i < POIs.getLayers().length; i++) {
+	var ll = POIs.getLayers()[i].feature.geometry.coordinates;
+	gds.push([uni, new L.LatLng(ll[1],ll[0])])
+    };
+    
+    Geodesic.setLatLngs(gds);
+});
+
 };
 
 $(document).ready(createMap);
