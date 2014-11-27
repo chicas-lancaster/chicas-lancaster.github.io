@@ -420,76 +420,76 @@
 
 <div class="ym-fbox">
 <h3>Filter By Tag</h3>
-      <div class="ym-fbox-wrap">
-	<div>
+      <div class="ym-fbox-wrap" style="width:100%" id="tagboxes">
+	<div class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="all" data-tag="" checked="yes"/>
 	  <label for="all"><span class="tag label">(all projects)</span></label>
 	</div>
-		<div title="Show projects tagged africa">
+		<div title="Show projects tagged africa" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-africa" data-tag="tag-africa"/>
 	  <label for="tag-africa"><span class="tag label">africa</span></label>
 	</div>
-		<div title="Show projects tagged asia">
+		<div title="Show projects tagged asia" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-asia" data-tag="tag-asia"/>
 	  <label for="tag-asia"><span class="tag label">asia</span></label>
 	</div>
-		<div title="Show projects tagged brazil">
+		<div title="Show projects tagged brazil" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-brazil" data-tag="tag-brazil"/>
 	  <label for="tag-brazil"><span class="tag label">brazil</span></label>
 	</div>
-		<div title="Show projects tagged europe">
+		<div title="Show projects tagged europe" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-europe" data-tag="tag-europe"/>
 	  <label for="tag-europe"><span class="tag label">europe</span></label>
 	</div>
-		<div title="Show projects tagged forecasting">
+		<div title="Show projects tagged forecasting" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-forecasting" data-tag="tag-forecasting"/>
 	  <label for="tag-forecasting"><span class="tag label">forecasting</span></label>
 	</div>
-		<div title="Show projects tagged infection">
+		<div title="Show projects tagged infection" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-infection" data-tag="tag-infection"/>
 	  <label for="tag-infection"><span class="tag label">infection</span></label>
 	</div>
-		<div title="Show projects tagged malaria">
+		<div title="Show projects tagged malaria" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-malaria" data-tag="tag-malaria"/>
 	  <label for="tag-malaria"><span class="tag label">malaria</span></label>
 	</div>
-		<div title="Show projects tagged malaysia">
+		<div title="Show projects tagged malaysia" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-malaysia" data-tag="tag-malaysia"/>
 	  <label for="tag-malaysia"><span class="tag label">malaysia</span></label>
 	</div>
-		<div title="Show projects tagged nhs">
+		<div title="Show projects tagged nhs" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-nhs" data-tag="tag-nhs"/>
 	  <label for="tag-nhs"><span class="tag label">nhs</span></label>
 	</div>
-		<div title="Show projects tagged portugal">
+		<div title="Show projects tagged portugal" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-portugal" data-tag="tag-portugal"/>
 	  <label for="tag-portugal"><span class="tag label">portugal</span></label>
 	</div>
-		<div title="Show projects tagged south_america">
+		<div title="Show projects tagged south_america" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-south_america" data-tag="tag-south_america"/>
 	  <label for="tag-south_america"><span class="tag label">south_america</span></label>
 	</div>
-		<div title="Show projects tagged spatial">
+		<div title="Show projects tagged spatial" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-spatial" data-tag="tag-spatial"/>
 	  <label for="tag-spatial"><span class="tag label">spatial</span></label>
 	</div>
-		<div title="Show projects tagged sri_lanka">
+		<div title="Show projects tagged sri_lanka" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-sri_lanka" data-tag="tag-sri_lanka"/>
 	  <label for="tag-sri_lanka"><span class="tag label">sri_lanka</span></label>
 	</div>
-		<div title="Show projects tagged surveillance">
+		<div title="Show projects tagged surveillance" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-surveillance" data-tag="tag-surveillance"/>
 	  <label for="tag-surveillance"><span class="tag label">surveillance</span></label>
 	</div>
-		<div title="Show projects tagged time_series">
+		<div title="Show projects tagged time_series" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-time_series" data-tag="tag-time_series"/>
 	  <label for="tag-time_series"><span class="tag label">time_series</span></label>
 	</div>
-		<div title="Show projects tagged uk">
+		<div title="Show projects tagged uk" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-uk" data-tag="tag-uk"/>
 	  <label for="tag-uk"><span class="tag label">uk</span></label>
 	</div>
-		<div title="Show projects tagged zoonosis">
+		<div title="Show projects tagged zoonosis" class="tagbox">
 	  <input class="tagfilter" type="radio" name="tags" id="tag-zoonosis" data-tag="tag-zoonosis"/>
 	  <label for="tag-zoonosis"><span class="tag label">zoonosis</span></label>
 	</div>
@@ -539,6 +539,11 @@ $container.isotope({
   layoutMode: 'masonry',
   masonry: { gutter: 10 }
 });
+});
+
+var $tbs = $("#tagboxes");
+$tbs.isotope({
+	itemSelector: '.tagbox'
 });
 
 $('input.tagfilter').on('change', function(){
