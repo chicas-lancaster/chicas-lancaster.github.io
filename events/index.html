@@ -149,6 +149,11 @@ $(document).ready(function() {
 	    left:   'title',
 	    center: '',
 	    right:  'today prev,next month basicWeek'
+	},
+	eventClick: function(event) {
+	    // opens events in a new window
+	    window.open(event.url, '_blank');
+	    return false;
 	}
         // put your options and callbacks here
     })
