@@ -1,4 +1,8 @@
 
+a:hover {
+ text-decoration: underline;
+}
+
 .leaflet-container  a:hover, a:focus {
     background-color: #4d87c7;
     color: white;
@@ -34,6 +38,12 @@ label span.tag:hover {
     border: 1px solid #CCCCCC;
     vertical-align:middle;
     margin-bottom: 3px; 
+}
+
+img.newspic {
+ border: 2px solid #CCCCCC;
+ float: left;
+ margin-right: 0.5em;
 }
 
 div.poster {
