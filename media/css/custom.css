@@ -22,6 +22,22 @@ color: #b5121b
     color: #4d87c7;
 }
 
+.quant-1 {
+    font-size: 110%
+}
+.quant-2 {
+    font-size: 130%
+}
+.quant-3 {
+    font-size: 150%
+}
+.quant-4 {
+    font-size: 170%
+}
+.quant-5 {
+    font-size: 190%
+}
+
 label span.tag:hover {
     text-decoration: underline;
 }
