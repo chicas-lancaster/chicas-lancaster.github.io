@@ -12,6 +12,8 @@ h1, h2, h3, h4, h5, h6 {
 color: #b5121b
 }
 
+h6.newsdate {margin-bottom: 0; font-size: 90%}
+
 .tag {
     background-color: #d1d1d1;
     line-height: 120%;
@@ -23,19 +25,23 @@ color: #b5121b
 }
 
 .quant-1 {
-    font-size: 110%
+    font-size: 110%;
 }
 .quant-2 {
-    font-size: 130%
+    font-size: 120%;
+    font-weight: bold;
 }
 .quant-3 {
-    font-size: 150%
+    font-size: 130%;
+    font-weight: bold;
 }
 .quant-4 {
-    font-size: 170%
+    font-weight: bold;
+    font-size: 140%;
 }
 .quant-5 {
-    font-size: 190%
+    font-weight: bold;
+    font-size: 150%;
 }
 
 label span.tag:hover {
