@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Tom Keegan</title>
+	<title>Lancaster Medical School - CHICAS - Upcoming Events</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +54,9 @@
                 href="/projects">
                 Projects
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="People"
-                class="button white active people"
+                class="button white people"
                 href="/people">
                 People
             </a>
@@ -66,9 +66,9 @@
                 href="/news">
                 News
             </a>
-        </li>        <li class="">
+        </li>        <li class="active">
             <a title="Events"
-                class="button white events"
+                class="button white active events"
                 href="/events">
                 Events
             </a>
@@ -90,104 +90,30 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Tom Keegan</h2>
-<p>
-Tom's research interests are in spatial epidemiology.
+      <h2>Upcoming Events</h2>
 
-</p>
+<div id="events">
+</div>
+
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      
-
-<div class="profilepic">
-<img src="/media/images/people/profile_keegan.jpg">
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Current Projects</h2>
+      <h3>Events Pages</h3>
 <ul>
-<li><a href="/projects/stroke.html">Predicting Stroke</a></li>
-<li><a href="/projects/infection_networks.html">Infections and Networks</a></li>
+<li><a href="index.html">Calendar</a></li>
+<li><a href="list.html">List</a></li>
 </ul>
-
-<h2>Finished Projects</h2>
+<p>
+The CHICAS calendar of events can be accessed via Google Calendar. Use one of the 
+links below to integrate with your personal calendaring system.
+</p>
 <ul>
-<li><a href="/projects/giardia.html">Giardia/Cryptosporidium Study</a></li>
-<li><a href="/projects/incinerators.html">Incinerator Study</a></li>
+<li>
+<a href="https://www.google.com/calendar/feeds/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic">XML</a></li>
+<li><a href="https://www.google.com/calendar/ical/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic.ics">ICAL</a></li>
+<li><a href="https://www.google.com/calendar/embed?src=e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com&ctz=Europe/London">HTML</a></li>
 </ul>
-
-
-
     </div>
   </aside>
 </section>
@@ -204,6 +130,14 @@ Tom's research interests are in spatial epidemiology.
 
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
+<script src="/media/js/libs/jquery.min.js"></script>
+<script src="run.js"></script>
+<script>
+$(document).ready(function(){
+  getN(10,"#events","eventList","eventItem");
+});
+
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

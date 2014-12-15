@@ -165,4 +165,53 @@ div .project p {
     margin-bottom: 0;
 }
 
+div .newsbox p {
+    margin-bottom: 0.5em;
+}
 
+
+div .eventlist {
+   
+}
+
+div .eventlist p {
+    margin-bottom: 0.5em;
+}
+
+div .eventlist .event {
+    border: 1px solid #B5121B;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+div .eventlist h3.summary {
+    padding-bottom: 0.5em;
+    margin-bottom: 0em;
+}
+
+div .eventlist .start {
+    margin-bottom: 0.5em;
+}
+
+div .eventlist .description {
+ 
+}
+
+div .eventlist .when {
+    font-weight: bold;
+}
+div .eventlist .where {
+    font-weight: bold;
+}
+
+div .upcoming .when {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+
+div .upcoming h4 {margin-bottom: 0.5em}
+div .upcoming h5 {margin-bottom: 0.5em}
+div .upcoming p {margin-bottom: 0.5em}
+div .upcoming .where {font-weight: bold}
