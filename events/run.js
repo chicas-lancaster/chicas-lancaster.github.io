@@ -33,7 +33,7 @@ var templates = {
 };
 
 dateFormat = function(d){
-    return d.getDate() + " " + d.getMonthName() + ", " + d.getFullYear();
+    return d.getDayName() + ", " + d.getDate() + " " + d.getMonthName();
 }
 
 getWhen = function(v){
@@ -50,7 +50,7 @@ getWhen = function(v){
 	};
     }else{
 	var when = new Date(starter.dateTime);
-	when = dateFormat(when) + " " + when.getHours() + ":" + pad(when.getMinutes());
+	when = dateFormat(when) + " at " + when.getHours() + ":" + pad(when.getMinutes());
     };
     return when;
 };

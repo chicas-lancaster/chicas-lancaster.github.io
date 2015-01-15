@@ -211,6 +211,7 @@ div .upcoming .when {
 }
 
 
+div.upcoming {margin-bottom: 0.5em}
 div .upcoming h4 {margin-bottom: 0.5em}
 div .upcoming h5 {margin-bottom: 0.5em}
 div .upcoming p {margin-bottom: 0.5em}
