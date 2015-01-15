@@ -110,6 +110,17 @@ header a:hover {background: white}
     width: 75%;
 }
 
+div #peoplegroups {
+    padding-bottom: 2em;
+}
+
+div.peoplegroup {
+    width: 32%;
+    padding: 0 0 0.5em 0;
+    margin: 0;
+}
+
+
 div #projects {
     padding-bottom: 2em;
 }
