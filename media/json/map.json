@@ -40,5 +40,9 @@
         "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
         "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
         },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [31.485278,-24.011389]},
+        "properties": {"name": "One Health Workshop in South Africa", "link": "/news/one_health_workshop.html"}
+        },
 {}
 ]}

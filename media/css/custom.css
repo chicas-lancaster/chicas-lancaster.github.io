@@ -176,6 +176,10 @@ div .project p {
     margin-bottom: 0;
 }
 
+div.newsbox h5 {
+    margin-bottom: 0.5em;
+}
+
 div .newsbox p {
     margin-bottom: 0.5em;
 }
@@ -227,3 +231,11 @@ div .upcoming h4 {margin-bottom: 0.5em}
 div .upcoming h5 {margin-bottom: 0.5em}
 div .upcoming p {margin-bottom: 0.5em}
 div .upcoming .where {font-weight: bold}
+
+p.quote {
+    font-style: italic;
+    font-size: 110%;
+    margin-left: 0.5em;
+    border-left: 5px solid #B5121B;
+    padding-left: 0.5em;   
+}
