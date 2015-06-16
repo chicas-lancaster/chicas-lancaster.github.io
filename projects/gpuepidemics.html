@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Paula Moraga</title>
+	<title>Lancaster Medical School - CHICAS - GPU accelerated epidemic forecasting</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,12 @@
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
+ <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to loca
+l if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+<script src="/media/js/libs/slimbox2.js"></script>
+<link rel="stylesheet" href="/media/css/slimbox/slimbox2.css" type="text/css" media="screen" />
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -48,15 +54,15 @@
                 href="/index.html">
                 Home
             </a>
-        </li>        <li class="">
+        </li>        <li class="active">
             <a title="Projects"
-                class="button white projects"
+                class="button white active projects"
                 href="/projects">
                 Projects
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="People"
-                class="button white active people"
+                class="button white people"
                 href="/people">
                 People
             </a>
@@ -90,95 +96,55 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Paula Moraga</h2>
+      <h2>GPU accelerated epidemic forecasting</h2>
+<div class="pagepic">
+<a href="/media/images/content/box_fmdOcc50.png" rel="lightbox" title="Predicted undetected infections on day 50 of the UK foot and mouth disease outbreak in 2001.">
+<img src="/media/images/content/page_fmdOcc50.png">
+<br/>Predicted undetected infections on day 50 of the UK foot and mouth disease outbreak in 2001.
+</a>
+</div>
 <p>
-Paula Moraga was a research associate.
-
-
-
-
+Bayesian analysis for epidemics currently represents the gold standard for fitting dynamical models of disease processes to observed data.  The development of reversible jump MCMC technology over the past 15 years has provided the opportunity to use Bayesian model fitting during an epidemic to provide real-time forecasts of disease risk.  This is able to inform adaptive control decisions and enable authorities to contain and extinguish outbreaks quickly and efficiently.  For large outbreaks, such as the UK foot and mouth outbreak in 2001, the repeated likelihood calculations required in MCMC means that inference has traditionally been too slow to make predictions in real time.  This project is exploring cutting-edge general purpose GPU methods to accelerate the likelihood calculations to a point where real-time inference is a possibility, and forecasts can be made within an overnight timeframe.
 </p>
+<p>
+This fledgling project aims to provide an accessible and fast framework for epidemic prediction by:
+<ul>
+<li>Providing a flexible computational framework for rapid development of rjMCMC algorithms for epidemics</li>
+<li>Leveraging the latest in massively parallel low-latency GPU processing for likelihood calculations</li>
+<li>Designing a multi-level software environment for data-curation, analysis, and visualisation</li>
+</ul>
+</p>
+<p>
+This project is being led by CHICAS staff, with a view to extending to an epidemics-community supported open source project.
+</p>
+
+
+
+
+
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
+                  <h2>People</h2>
+            <ul>
+			<li><a href="/people/jewell.html">Chris Jewell</a></li>
+			<li><a href="/people/rowlings.html">Barry Rowlingson</a></li>
+	      </ul>
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Current Projects</h2>
+      			
+      
+<h2>Links</h2>
 <ul>
-<li><a href="/projects/alderhey.html">Alder Hey Hospital Prediction</a></li>
+<li>
+<a href="http://en.wikipedia.org/wiki/CUDA">Wikipedia on CUDA for GPGPU computing</a>
+</li>
+<li>
+<a href="http://github.com/chrism0dwk/infer">Github hosting of InFER</a>
+</li>
 </ul>
 
-
-
-
-    </div>
+          </div>
   </aside>
 </section>
     </div>
