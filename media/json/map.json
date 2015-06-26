@@ -5,44 +5,44 @@
         "properties": {"name": "One Health Workshop in South Africa", "link": "/news/one_health_workshop.html"}
         },
       { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [-4.40010, 50.56023]},
+        "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
+        },
+      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [34.759722,-15.97]},
         "properties": {"name": "Malaria Control in Malawi", "link": "/projects/malaria_in_malawi.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [102.24387, 6.13298]},
-        "properties": {"name": "Predicting Stroke", "link": "/projects/stroke.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
-        "properties": {"name": "Loa-loa Modelling", "link": "/projects/loaloa.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [79.833333,6.933333]},
-        "properties": {"name": "National Snakebite Study in Sri Lanka", "link": "/projects/snakebite.html"}
-        },
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
-        "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-38.476667,-12.974722]},
         "properties": {"name": "Brazilian Leptospirosis Study", "link": "/projects/lepto.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [-4.40010, 50.56023]},
-        "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
-        },
-      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-60.016667, -3.1]},
         "properties": {"name": "Amazonian Food Insecurity", "link": "/projects/amazon_food_insecurity.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
+        "properties": {"name": "Loa-loa Modelling", "link": "/projects/loaloa.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
+        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [79.833333,6.933333]},
+        "properties": {"name": "National Snakebite Study in Sri Lanka", "link": "/projects/snakebite.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-9.15, 38.766667]},
         "properties": {"name": "Tuberculosis in Portugal", "link": "/projects/tb_portugal.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [6.172669456464479, 15.267395668554396]},
-        "properties": {"name": "Meningitis Forecasting", "link": "/projects/meningitis.html"}
+        "geometry": {"type": "Point", "coordinates": [-2.898476278359631, 53.420175096345801]},
+        "properties": {"name": "Alder Hey Hospital Prediction", "link": "/projects/alderhey.html"}
+        },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [102.24387, 6.13298]},
+        "properties": {"name": "Predicting Stroke", "link": "/projects/stroke.html"}
         },
 {}
 ]}
