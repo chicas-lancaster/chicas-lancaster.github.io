@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>CHICAS News</title>
+ <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
+ <link>http://chicas.lancaster-university.uk/</link>
+ <lastBuildDate>Fri, 20 Nov 2015 14:27:09 +0000</lastBuildDate>
+ <pubDate>Fri, 20 Nov 2015 14:27:09 +0000</pubDate>
+ <ttl>1800</ttl>
+ 
+
+
+
+ <item>
+  <title>CHICAS Partnership with Liverpool Tropical Medicine Creates New PhD Opportunities</title>
+  <description>Our successful MRC application has resulted in a number of fully-funded studentships in quantitative and translational research for Global Health.</description>
+  <link>http://chicas.lancaster-university.uk//news/mrc-dtp.html</link>
+  <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
+ </item>
+
+
+ <item>
+  <title>PhD Student Wins TakeAIM Prize</title>
+  <description>Justice Aheto has won a prize that recognises the value and impact of his research on malnutrition in Ghana.</description>
+  <link>http://chicas.lancaster-university.uk//news/justice_prize.html</link>
+  <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+ </item>
+
+
+ <item>
+  <title>Geostat Summer School at Lancaster</title>
+  <description>The Geostat Summer School was held in Lancaster from the 16th to the 23rd.</description>
+  <link>http://chicas.lancaster-university.uk//news/geostat_report.html</link>
+  <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+ </item>
+
+
+ <item>
+  <title>Chris Jewell Featured in Nvidia's GPU blog</title>
+  <description>Chris has been interviewed for the Nvidia "CUDA Zone" blog, talking about his epidemic modelling work.</description>
+  <link>http://chicas.lancaster-university.uk//news/gpu_jewell.html</link>
+  <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
+ </item>
+
+
+ <item>
+  <title>Five New Staff for CHICAS</title>
+  <description>The University's 50th Anniversary Lectureships will bring five new staff to CHICAS, doubling the size of the group.</description>
+  <link>http://chicas.lancaster-university.uk//news/fifty_fifty.html</link>
+  <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+ </item>
+
+
+</channel>
+</rss>
