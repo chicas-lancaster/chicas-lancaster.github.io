@@ -148,6 +148,8 @@ image:
 links:
   - url: http://www.wellcome.ac.uk/Funding/Innovations/Funded-projects/Health-Innovation-Challenge-Fund/index.htm
     description: Health Innovation Challenge Fund projects list.
+  - url: http://www.savsnet.co.uk/
+    description: "SAVSNET: Small Animal Veterinary Surveillance Network"
 ---
 <p>
 This project, led by colleagues from Liverpool University, aims to integrate sources of information
@@ -155,8 +157,8 @@ that may relate to diarrhoeal diseases and produce a real-time monitor of rates,
 outbreaks.
 </p>
 <p>
-Lancaster will be working on combining human and veterinary syndromic reporting data for rapid analysis. Other members
-of the team are looking at quicker methods of pathogen identification from samples.
+We are working on combining human and veterinary syndromic reporting data for rapid analysis. The human data
+includes NHS111 call statistics, the veterinary data is obtained by <a href="http://www.savsnet.co.uk/">SAVSNET</a>.
 </p>
 </pre>
 <h3>Alder Hey Hospital Prediction : Predicting Emergency Admissions in a Children's Hospital</h3>
@@ -286,39 +288,6 @@ This project, funded by the BBSRC, will investigate several aspects of the disea
 <p>
 The project is being led by staff from the Liverpool Vet School, with Chicas
 working on the spatial analysis part of the project.
-</p>
-</pre>
-<h3>Genetics of Bovine TB : MRC-funded Research into the Spatial Genetics of Bovine TB</h3>
-
-<pre>
----
-title: Genetics of Bovine TB
-description: MRC-funded Research into the Spatial Genetics of Bovine TB
-people:
- - diggle
- - taylor
-tags:
- - uk
- - europe
-map: -4.40010, 50.56023
-links:
- - url: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2005.05373.x/abstract
-   description: "Our JRSS C Paper - Nonparametric estimation of spatial segregation in a multivariate point process: bovine tuberculosis in Cornwall, UK"
- - url: http://projecteuclid.org/euclid.ss/1386078878
-   description: "Our Statistical Science paper on Spatial and Spatio-Temporal Log-Gaussian Cox Processes: Extending the Geostatistical Paradigm"
----
-<p>
-Bovine tuberculosis is a major problem for UK cattle-farming, with
-especially high prevalence
-in the South-West of
-England. Describing the
-geographical patterning of
-different genotypic strains
-of the disease-causing
-organism contributes to
-our understanding of 
-disease-causing
-mechanisms.
 </p>
 </pre>
 <h3>Campylobacter Transmission : A Better Understanding of Campylobacter in Humans</h3>
@@ -676,23 +645,22 @@ image:
    caption: Showing exceedence thresholds in Google Earth
 ---
 <p>
-Our earlier work on Loa-loa modelling 
-developed a model for the cumulative distribution function of
-intensity of Loa Loa infection based on 
-community-level
-prevalence from rapid diagnostic tests. This allows us to estimate the proportion of the
-community whose parasite counts exceed certain policy relevant
-infection levels (for example 8,000 or 30,000 microfilariae/ml) which
-correspond to high and very high risk of severe adverse events when
-the individuals are treated with drugs used in the mass administration
-programme to eliminate Lymphatic Filariasis.
-</p>
-<p>
-In an extension of this project we will be updating our risk map 
-by incorporating the latest data from both rapid diagnostic test
-results and blood sample tests. The model also includes geographic
-covariates that give a broad indication of habitat suitability for 
-Loa-loa infection.
+Our earlier work on Loa-loa modelling developed a predictive map to
+identify areas of high Loa loa prevalence by combining prevalence
+survey data with satellite-derived environmental covariates in a
+geostatistical model for the spatial variation in prevalence.  More
+recently, we have been modelling the relationship between
+community-level prevalence and the distribution of intensity of
+Loa Loa infection amongst infected members of the community. This
+allows us to estimate the proportion of the community whose parasite
+counts exceed certain policy-relevant infection levels (for example
+8,000 or 30,000 microfilariae/ml), using only prevalence data. The
+importance of this is that highly infected individuals are at risk of
+severe adverse events when treated with drugs used in mass
+administration programmes to control Onchocerciasis and Lymphatic
+Filariasis, but estimation of infection levels on a wide geographical
+scale is much more expensive and time-consuming than estimating
+prevalence.
 </p>
 </pre>
 <h3>Malaria Control in Malawi : Community-based Malaria Control in Majete Wildlife Reserve, Malawi</h3>
@@ -704,6 +672,7 @@ description: Community-based Malaria Control in Majete Wildlife Reserve, Malawi
 people:
  - giorgi
  - diggle
+ - chipeta
 tags:
  - spatial
  - malaria
@@ -788,6 +757,7 @@ title: Partial Likelihood for Space-Time Models
 description: Developing Methods for Space-time Point Process Models
 people:
  - diggle
+ - read
  - kaimi
  - rowlings
 links:
@@ -801,6 +771,10 @@ methods. They can be applied to any model that specifies the intensity of
 future  events conditional on the pattern of past events. This occurs 
 naturally in such diverse areas as infectious disease models or patterns 
 of birds choosing nest locations on a finite habitat.
+</p>
+
+<p>
+We are currently exploring ways to use partial likelihood methods to estimate important structural parameters of infectious disease outbreaks, for example a spatio-temporal extension of the reproduction number, R0.
 </p>
 </pre>
 <h3>National Snakebite Study in Sri Lanka : Developing a Risk Map for Snakebites</h3>
@@ -967,6 +941,39 @@ default_block: project
 
 
 <ul>
+<h3>Genetics of Bovine TB : MRC-funded Research into the Spatial Genetics of Bovine TB</h3>
+<pre>
+---
+title: Genetics of Bovine TB
+description: MRC-funded Research into the Spatial Genetics of Bovine TB
+people:
+ - diggle
+ - taylor
+tags:
+ - uk
+ - europe
+map: -4.40010, 50.56023
+finished: yes
+links:
+ - url: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2005.05373.x/abstract
+   description: "Our JRSS C Paper - Nonparametric estimation of spatial segregation in a multivariate point process: bovine tuberculosis in Cornwall, UK"
+ - url: http://projecteuclid.org/euclid.ss/1386078878
+   description: "Our Statistical Science paper on Spatial and Spatio-Temporal Log-Gaussian Cox Processes: Extending the Geostatistical Paradigm"
+---
+<p>
+Bovine tuberculosis is a major problem for UK cattle-farming, with
+especially high prevalence
+in the South-West of
+England. Describing the
+geographical patterning of
+different genotypic strains
+of the disease-causing
+organism contributes to
+our understanding of 
+disease-causing
+mechanisms.
+</p>
+</pre>
 <h3>Giardia/Cryptosporidium Study : Assessing Risk Factors for Giardia and Cryptosporidium</h3>
 <pre>
 ---
