@@ -4,11 +4,19 @@
  <title>CHICAS News</title>
  <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
  <link>http://chicas.lancaster-university.uk/</link>
- <lastBuildDate>Fri, 18 Dec 2015 15:27:50 +0000</lastBuildDate>
- <pubDate>Fri, 18 Dec 2015 15:27:50 +0000</pubDate>
+ <lastBuildDate>Wed, 17 Feb 2016 14:46:16 +0000</lastBuildDate>
+ <pubDate>Wed, 17 Feb 2016 14:46:16 +0000</pubDate>
  <ttl>1800</ttl>
  
 
+
+
+ <item>
+  <title>CHICAS at TIES2016, Edinburgh, July 2016</title>
+  <description>Dr Luigi Sedda has organised an invited session for the International Environmetrics Society conference (TIES) on Vector-borne disease mapping.</description>
+  <link>http://chicas.lancaster-university.uk//news/ties2016.html</link>
+  <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+ </item>
 
 
  <item>
@@ -40,14 +48,6 @@
   <description>Chris has been interviewed for the Nvidia "CUDA Zone" blog, talking about his epidemic modelling work.</description>
   <link>http://chicas.lancaster-university.uk//news/gpu_jewell.html</link>
   <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
- </item>
-
-
- <item>
-  <title>Five New Staff for CHICAS</title>
-  <description>The University's 50th Anniversary Lectureships will bring five new staff to CHICAS, doubling the size of the group.</description>
-  <link>http://chicas.lancaster-university.uk//news/fifty_fifty.html</link>
-  <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
  </item>
 
 
