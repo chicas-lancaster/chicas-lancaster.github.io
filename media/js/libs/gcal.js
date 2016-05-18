@@ -1,12 +1,15 @@
 /*!
- * FullCalendar v2.2.1 Google Calendar Plugin
- * Docs & License: http://arshaw.com/fullcalendar/
- * (c) 2013 Adam Shaw
+ * FullCalendar v2.6.1 Google Calendar Plugin
+ * Docs & License: http://fullcalendar.io/
+ * (c) 2015 Adam Shaw
  */
  
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
 		define([ 'jquery' ], factory);
+	}
+	else if (typeof exports === 'object') { // Node/CommonJS
+		module.exports = factory(require('jquery'));
 	}
 	else {
 		factory(jQuery);
@@ -15,40 +18,53 @@
 
 
 var API_BASE = 'https://www.googleapis.com/calendar/v3/calendars';
-var fc = $.fullCalendar;
-var applyAll = fc.applyAll;
+var FC = $.fullCalendar;
+var applyAll = FC.applyAll;
 
 
-fc.sourceNormalizers.push(function(sourceOptions) {
+FC.sourceNormalizers.push(function(sourceOptions) {
+	var googleCalendarId = sourceOptions.googleCalendarId;
 	var url = sourceOptions.url;
 	var match;
 
 	// if the Google Calendar ID hasn't been explicitly defined
-	if (!sourceOptions.googleCalendarId && url) {
+	if (!googleCalendarId && url) {
 
-		// detect if the ID was specified as a single string
-		if ((match = /^[\w-]+@[\w-\.]+\.calendar\.google\.com$/.test(url))) {
-			sourceOptions.googleCalendarId = url;
+		// detect if the ID was specified as a single string.
+		// will match calendars like "asdf1234@calendar.google.com" in addition to person email calendars.
+		if (/^[^\/]+@([^\/\.]+\.)*(google|googlemail|gmail)\.com$/.test(url)) {
+			googleCalendarId = url;
 		}
 		// try to scrape it out of a V1 or V3 API feed URL
 		else if (
 			(match = /^https:\/\/www.googleapis.com\/calendar\/v3\/calendars\/([^\/]*)/.exec(url)) ||
 			(match = /^https?:\/\/www.google.com\/calendar\/feeds\/([^\/]*)/.exec(url))
 		) {
-			sourceOptions.googleCalendarId = decodeURIComponent(match[1]);
+			googleCalendarId = decodeURIComponent(match[1]);
+		}
+
+		if (googleCalendarId) {
+			sourceOptions.googleCalendarId = googleCalendarId;
 		}
 	}
 
-	// make each google calendar source uneditable by default
-	if (sourceOptions.googleCalendarId) {
+
+	if (googleCalendarId) { // is this a Google Calendar?
+
+		// make each Google Calendar source uneditable by default
 		if (sourceOptions.editable == null) {
 			sourceOptions.editable = false;
 		}
+
+		// We want removeEventSource to work, but it won't know about the googleCalendarId primitive.
+		// Shoehorn it into the url, which will function as the unique primitive. Won't cause side effects.
+		// This hack is obsolete since 2.2.3, but keep it so this plugin file is compatible with old versions.
+		sourceOptions.url = googleCalendarId;
 	}
 });
 
 
-fc.sourceFetchers.push(function(sourceOptions, start, end, timezone) {
+FC.sourceFetchers.push(function(sourceOptions, start, end, timezone) {
 	if (sourceOptions.googleCalendarId) {
 		return transformOptions(sourceOptions, start, end, timezone, this); // `this` is the calendar
 	}
@@ -56,24 +72,21 @@ fc.sourceFetchers.push(function(sourceOptions, start, end, timezone) {
 
 
 function transformOptions(sourceOptions, start, end, timezone, calendar) {
-	var url = API_BASE + '/' + encodeURI(sourceOptions.googleCalendarId) + '/events?callback=?'; // jsonp
+	var url = API_BASE + '/' + encodeURIComponent(sourceOptions.googleCalendarId) + '/events?callback=?'; // jsonp
 	var apiKey = sourceOptions.googleCalendarApiKey || calendar.options.googleCalendarApiKey;
 	var success = sourceOptions.success;
 	var data;
+	var timezoneArg; // populated when a specific timezone. escaped to Google's liking
 
 	function reportError(message, apiErrorObjs) {
 		var errorObjs = apiErrorObjs || [ { message: message } ]; // to be passed into error handlers
-		var consoleObj = window.console;
-		var consoleWarnFunc = consoleObj ? (consoleObj.warn || consoleObj.log) : null;
 
 		// call error handlers
 		(sourceOptions.googleCalendarError || $.noop).apply(calendar, errorObjs);
 		(calendar.options.googleCalendarError || $.noop).apply(calendar, errorObjs);
 
 		// print error to debug console
-		if (consoleWarnFunc) {
-			consoleWarnFunc.apply(consoleObj, [ message ].concat(apiErrorObjs || []));
-		}
+		FC.warn.apply(null, [ message ].concat(apiErrorObjs || []));
 	}
 
 	if (!apiKey) {
@@ -92,10 +105,16 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 		end = end.clone().utc().add(1, 'day');
 	}
 
+	// when sending timezone names to Google, only accepts underscores, not spaces
+	if (timezone && timezone != 'local') {
+		timezoneArg = timezone.replace(' ', '_');
+	}
+
 	data = $.extend({}, sourceOptions.data || {}, {
 		key: apiKey,
 		timeMin: start.format(),
 		timeMax: end.format(),
+		timeZone: timezoneArg,
 		singleEvents: true,
 		maxResults: 9999
 	});
@@ -104,9 +123,9 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 		googleCalendarId: null, // prevents source-normalizing from happening again
 		url: url,
 		data: data,
-		timezoneParam: 'timeZone',
 		startParam: false, // `false` omits this parameter. we already included it above
 		endParam: false, // same
+		timezoneParam: false, // same
 		success: function(data) {
 			var events = [];
 			var successArgs;
@@ -117,12 +136,19 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 			}
 			else if (data.items) {
 				$.each(data.items, function(i, entry) {
+					var url = entry.htmlLink;
+
+					// make the URLs for each event show times in the correct timezone
+					if (timezoneArg) {
+						url = injectQsComponent(url, 'ctz=' + timezoneArg);
+					}
+
 					events.push({
 						id: entry.id,
 						title: entry.summary,
 						start: entry.start.dateTime || entry.start.date, // try timed. will fall back to all-day
 						end: entry.end.dateTime || entry.end.date, // same
-						url: entry.htmlLink,
+						url: url,
 						location: entry.location,
 						description: entry.description
 					});
@@ -138,6 +164,15 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 
 			return events;
 		}
+	});
+}
+
+
+// Injects a string like "arg=value" into the querystring of a URL
+function injectQsComponent(url, component) {
+	// inject it after the querystring but before the fragment
+	return url.replace(/(\?.*?)?(#|$)/, function(whole, qs, hash) {
+		return (qs ? qs + '&' : '?') + component + hash;
 	});
 }
 

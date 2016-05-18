@@ -1,3 +1,8 @@
+.add-to-calendar {
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+    border-top: 1px solid #b5121b;
+}
 
 a:hover {
  text-decoration: underline;
@@ -196,7 +201,8 @@ div .eventlist p {
 div .eventlist .event {
     border: 1px solid #B5121B;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
     border-bottom-right-radius: 1em;
 }
 

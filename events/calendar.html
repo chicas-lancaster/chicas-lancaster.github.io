@@ -22,7 +22,8 @@
 	<![endif]-->
 
 <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400/Roboto+Slab:400">
-
+<link rel="alternate" type="application/rss+xml" title="RSS"
+      href="http://chicas.lancaster-university.uk/news/news.rss">
 </head>
 <body>
 <ul class="ym-skiplinks">
@@ -32,12 +33,11 @@
 
 <header>
   <div class="ym-wrapper ym-clearfix">
-    <div class="ym-wbox">
-<a href="/">
-<img alt="CHICAS" src="/media/images/logo/clogo.png"  /> 
-</a>
-<a href="http://lancaster.ac.uk/"><img alt="Health and Medicine, Lancaster University" src="/media/images/logo/lulogo.png" style="float:right" /></a>
-      </div>
+    <div class="ym-wbox" id="headerbox">
+      <a href="/">
+	<img alt="CHICAS" src="/media/images/logo/clogo.png"  /> 
+      </a>
+      <a href="http://www.lancaster.ac.uk/shm/divisions/med/"><img id="unilogo" alt="Health and Medicine, Lancaster University" src="/media/images/logo/lulogo.png" style="float:right" /></a>
     </div>
   </div>
 </header>
@@ -63,6 +63,12 @@
                 class="button white people"
                 href="/people">
                 People
+            </a>
+        </li>        <li class="">
+            <a title="Partners and Affiliations"
+                class="button white partners"
+                href="/partners.html">
+                Partners
             </a>
         </li>        <li class="">
             <a title="News Items"
@@ -103,7 +109,19 @@
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      
+      <h3>Event Listings</h3>
+<p>
+The <a href="./">Event Listings</a> page shows upcoming and archived events.
+</p>
+<h3>Calendar Integration</h3>
+<p>You can add CHICAS events to your personal calendar using the links below. 
+Read the documentation of your personal calendar system for details.
+</p>
+<ul>
+<li><a href="https://www.google.com/calendar/ical/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic.ics"><img src="/media/images/graphics/ical.gif" alt="ICAL"></a></li>
+<li><a href="https://www.google.com/calendar/embed?src=e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com&ctz=Europe/London"><img src="/media/images/graphics/html.gif" alt="HTML"></a></li>
+</ul>
+
     </div>
   </aside>
 </section>
@@ -113,7 +131,7 @@
 <footer>
   <div class="ym-wrapper">
     <div class="ym-wbox">
-      <p>© Lancaster University 2014 &ndash; Layout based on <a href="http://www.yaml.de">YAML</a></p>
+      <p>© Lancaster University 2015 &ndash; Layout based on <a href="http://www.yaml.de">YAML</a> &ndash;  <a href="/news/news.rss" title="News Feed"><img src="/media/images/graphics/rss_icon_glass_red12.PNG"> news feed</a></p>
     </div>
   </div>
 </footer>
@@ -130,18 +148,24 @@ $(document).ready(function() {
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-events: {
-            url: 'https://www.google.com/calendar/feeds/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic',
+	googleCalendarApiKey: 'AIzaSyAB1Jd-Jf3U-R84BJzJAPTIYZZmM1sqtjs',
+	events: {
+	    googleCalendarId: 'e8j7bjqajiblsstfcc59iimss0@group.calendar.google.com',
             className: 'gcal-event'
         },
-header: {
-    left:   'title',
-    center: '',
-    right:  'today prev,next month basicWeek'
-}
+	header: {
+	    left:   'title',
+	    center: '',
+	    right:  'today prev,next month basicWeek'
+	},
+	eventClick: function(event) {
+	    // opens events in a new window
+	    window.open(event.url, '_blank');
+	    return false;
+	}
         // put your options and callbacks here
     })
-
+    
 });
 </script>
 

@@ -14,18 +14,8 @@
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
+<link rel='stylesheet' href="/media/js/libs/jquery.icalendar.css" />
 
-<link rel='stylesheet' href="/media/css/fullcalendar.css" />
-<link rel='stylesheet' href="/media/css/yaml/add-ons/accessible-tabs/tabs.css" />
-<style type="text/css">
-  .easy-modal,
-  .easy-modal-animated {
-  width: 600px;
-  padding: 2em;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.35);
-  background-color: white;
-  }
-</style>
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -110,48 +100,39 @@
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
       
-<h2>Event Listings</h2>
-<div class="jquery_tabs">
-      <h3 class="eventsection" >Upcoming Events</h3>
-      <div class="tabbody">
-	<div id="events"></div>
-      </div>
-
-      <h3 class="eventsection" >Event Archive</h3>
-      <div class="tabbody">
-
-	<div id="eventarchive">
-
-	</div>
-      </div>
-</div>
+<p>
+Four dollar toast waistcoat chillwave asymmetrical whatever, fap jean
+shorts deep v. Meditation craft beer lo-fi tumblr occupy. Aesthetic
+seitan 3 wolf moon blog, typewriter sustainable before they sold out
+occupy. Gentrify yuccie occupy, whatever austin tumblr chicharrones
+salvia master cleanse hoodie next level yr narwhal. Mlkshk +1 venmo,
+tacos affogato kogi selfies. Mlkshk wayfarers gastropub, kickstarter
+tumblr slow-carb chia before they sold out selvage typewriter street
+art intelligentsia bitters listicle. Chicharrones cray chartreuse,
+hella freegan bitters brunch four dollar toast wolf brooklyn
+meditation.
+</p><p> Seitan food truck trust fund, flannel sriracha man bun vice
+shabby chic ramps chambray meggings godard you probably haven't heard
+of them aesthetic yuccie. Gastropub waistcoat tacos crucifix,
+cold-pressed vegan banh mi pop-up pitchfork knausgaard. Irony gentrify
+pork belly, farm-to-table lomo you probably haven't heard of them
+polaroid poutine tumblr keytar cornhole. Godard typewriter church-key
+scenester pabst williamsburg. Lumbersexual post-ironic seitan beard,
+tilde ennui cronut +1. Food truck tattooed yr, meggings sartorial
+hoodie XOXO messenger bag 3 wolf moon lo-fi irony literally cray
+readymade man bun. Cold-pressed pour-over readymade shoreditch pork
+belly, salvia you probably haven't heard of them pabst yr skateboard
+health goth portland.
+</p><p>
+Readymade tousled small batch offal deep v, 90's sriracha chicharrones squid green juice street art. Keffiyeh hammock organic church-key disrupt selvage. Neutra chartreuse aesthetic mlkshk, man braid messenger bag meggings farm-to-table tilde yuccie etsy venmo. Authentic blue bottle tofu hammock 8-bit craft beer, kitsch hoodie man bun. Paleo roof party PBR&B wolf pinterest tattooed, you probably haven't heard of them four dollar toast banh mi lomo listicle authentic mixtape meggings. Gochujang cliche fixie, intelligentsia kitsch 90's neutra biodiesel forage semiotics cardigan offal. Pitchfork pop-up franzen, selfies biodiesel ethical fanny pack locavore food truck hella synth meh banh mi asymmetrical banjo.
+</p>
+<div id="eventhere"></div>
 
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-      <div id="calendar">
-</div>
-<h3>Calendar Page</h3>
-<p>
-CHICAS events can also be viewed on the full
-<a href="calendar.html">calendar</a> page.
-</p>
-<div class="easy-modal" id="event-details">
-<div class="easy-modal-inner">
-<div class="eventlist" id="popup-event">
-</div>
-<button class="easy-modal-close" title="Close">Close</button>
-</div>
-</div>
-<h3>Calendar Integration</h3>
-<p>You can add CHICAS events to your personal calendar using the links below. 
-Read the documentation of your personal calendar system for details.
-</p>
-<ul>
-<li><a href="https://www.google.com/calendar/ical/e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com/public/basic.ics"><img src="/media/images/graphics/ical.gif" alt="ICAL"></a></li>
-<li><a href="https://www.google.com/calendar/embed?src=e8j7bjqajiblsstfcc59iimss0%40group.calendar.google.com&ctz=Europe/London"><img src="/media/images/graphics/html.gif" alt="HTML"></a></li>
-</ul>
+      
     </div>
   </aside>
 </section>
@@ -169,39 +150,44 @@ Read the documentation of your personal calendar system for details.
 <!-- full skip link functionality in webkit browsers -->
 <script src="/media/css/yaml/core/js/yaml-focusfix.js"></script>
 <script src="/media/js/libs/jquery.min.js"></script>
-<script src="/media/js/libs/jquery.easyModal.js"></script>
 <script src="/media/js/libs/ouical-orig.min.js"></script>
-<script src="run.js"></script>
-<script src="/media/js/libs/moment.min.js"></script>
-<script src="/media/js/libs/fullcalendar.min.js"></script>
-<script src="/media/css/yaml/add-ons/accessible-tabs/jquery.tabs.js"></script>
-<script type='text/javascript' src="/media/js/libs/gcal.js"></script>
 <script>
-$(document).ready(function() {
+var myCalendar = createCalendar({
+  // optional, you can pass in 'google', 'yahoo', 'outlook', 'ical'
+  calendars: ['google','ical','yahoo','outlook'],
+  options: {
+    class_name: 'calendaradder',
 
- getN(10,"#events","eventList","eventItem",9000);
- getArchived("#eventarchive","eventList","eventItem",9000)
+    // You can pass an ID. If you don't, one will be generated for you
+    id: 'addtocalendar'
+  },
+  data: {
+    // Event title
+    title: 'Get on the front page of HN',
 
-$('.jquery_tabs').accessibleTabs(
-   {
-     tabhead: '.eventsection',
-     fx: 'show',
-     fxspeed: null
-   });
+    // Event start date
+    start: new Date('June 15, 2013 19:00'),
 
-// $("#showtoday").bind("click", function(){drawcalendar()});
+    // Event duration (IN MINUTES)
+    duration: 120,
 
-drawcalendar();
+    // You can also choose to set an end time
+    // If an end time is set, this will take precedence over duration
+    end: new Date('June 15, 2013 23:00'),     
 
-	$('.easy-modal').easyModal({
-			overlay: 0.2
-		});
+    // Event Address
+    address: 'The internet',
 
-	$('.easy-modal-close').click(function(e) {
-			$('.easy-modal').trigger('closeModal');
-		});
+    // Event Description
+    description: 'Get on the front page of HN, then prepare for world domination.'
+  }
 });
+
+document.querySelector('#eventhere').appendChild(myCalendar);
+
 </script>
+
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
