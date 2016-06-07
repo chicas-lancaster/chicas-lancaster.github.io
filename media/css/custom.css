@@ -216,7 +216,7 @@ div .eventlist .start {
 }
 
 div .eventlist .description {
- 
+ white-space: pre-wrap;
 }
 
 div .eventlist .when {
