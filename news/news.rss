@@ -4,11 +4,19 @@
  <title>CHICAS News</title>
  <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
  <link>http://chicas.lancaster-university.uk/</link>
- <lastBuildDate>Mon, 18 Jul 2016 11:18:35 +0000</lastBuildDate>
- <pubDate>Mon, 18 Jul 2016 11:18:35 +0000</pubDate>
+ <lastBuildDate>Mon, 25 Jul 2016 13:36:12 +0000</lastBuildDate>
+ <pubDate>Mon, 25 Jul 2016 13:36:12 +0000</pubDate>
  <ttl>1800</ttl>
  
 
+
+
+ <item>
+  <title>Bluetongue Epidemics Workshop at Lancaster</title>
+  <description>A one-day workshop on control and protection.</description>
+  <link>http://chicas.lancaster-university.uk//news/btv_meeting.html</link>
+  <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
+ </item>
 
 
  <item>
@@ -40,14 +48,6 @@
   <description>The Geostat Summer School was held in Lancaster from the 16th to the 23rd.</description>
   <link>http://chicas.lancaster-university.uk//news/geostat_report.html</link>
   <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
- </item>
-
-
- <item>
-  <title>Chris Jewell Featured in Nvidia's GPU blog</title>
-  <description>Chris has been interviewed for the Nvidia "CUDA Zone" blog, talking about his epidemic modelling work.</description>
-  <link>http://chicas.lancaster-university.uk//news/gpu_jewell.html</link>
-  <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
  </item>
 
 
