@@ -17,6 +17,10 @@
         "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
         },
       { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [36.8, -1.266667]},
+        "properties": {"name": "Historical mapping of malaria Africa-wide", "link": "/projects/historical_malaria_mapping.html"}
+        },
+      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [-38.476667,-12.974722]},
         "properties": {"name": "Brazilian Leptospirosis Study", "link": "/projects/lepto.html"}
         },
