@@ -17,6 +17,10 @@
         "properties": {"name": "Genetics of Bovine TB", "link": "/projects/btb.html"}
         },
       { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [-2.3231299, 53.4917818]},
+        "properties": {"name": "Salford Health Atlas", "link": "/projects/dynamic_health_data.html"}
+        },
+      { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [36.8, -1.266667]},
         "properties": {"name": "Historical mapping of malaria Africa-wide", "link": "/projects/historical_malaria_mapping.html"}
         },
