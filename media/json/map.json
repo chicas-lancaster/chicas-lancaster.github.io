@@ -52,5 +52,9 @@
         "geometry": {"type": "Point", "coordinates": [-9.15, 38.766667]},
         "properties": {"name": "Tuberculosis in Portugal", "link": "/projects/tb_portugal.html"}
         },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [170.6107532,-40.9905225]},
+        "properties": {"name": "Inference for Vector-borne Diseases", "link": "/projects/vector_borne_disease.html"}
+        },
 {}
 ]}
