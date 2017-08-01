@@ -30,7 +30,7 @@
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [14.24978, 6.78890]},
-        "properties": {"name": "Loa-loa Modelling", "link": "/projects/loaloa.html"}
+        "properties": {"name": "Loa-loa Mapping", "link": "/projects/loaloa.html"}
         },
       { "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [34.759722,-15.97]},
