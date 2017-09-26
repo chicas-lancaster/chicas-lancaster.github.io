@@ -37,7 +37,7 @@
         "properties": {"name": "Malaria Control in Malawi", "link": "/projects/malaria_in_malawi.html"}
         },
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [-35.0168,15.7667]},
+        "geometry": {"type": "Point", "coordinates": [35.0168,-15.7667]},
         "properties": {"name": "Analysis of Pneumococcus Carriage in Malawi", "link": "/projects/malawi_pneumo.html"}
         },
       { "type": "Feature",
