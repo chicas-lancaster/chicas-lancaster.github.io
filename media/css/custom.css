@@ -8,7 +8,17 @@ a:hover {
  text-decoration: underline;
 }
 
-.leaflet-container  a:hover, a:focus {
+a.plainhead { 
+    color: #b5121b;
+    background: transparent;
+}
+
+a.carousel {
+  color: white;
+  text-decoration: underline;
+}
+
+.leaflet-container  a:hover {
     background-color: #4d87c7;
     color: white;
     text-decoration: none;
@@ -65,6 +75,14 @@ label span.tag:hover {
     border: 1px solid #CCCCCC;
     vertical-align:middle;
     margin-bottom: 3px; 
+}
+
+#lulogo {
+    padding-top: 1em;
+}
+
+#clogo {
+    padding-bottom: 1em;
 }
 
 img.newspic {
@@ -146,11 +164,11 @@ div .project {
 @media screen and (max-width: 620px) {
     /* small screens, two across */
   div .projectbox { width: 44%; }
-img#unilogo {width: 290px;}
+
 }
 
 @media screen and (max-width: 500px){
-img#unilogo {width: 200px;}
+
 }
 
 div .project .title {
