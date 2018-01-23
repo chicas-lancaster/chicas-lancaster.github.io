@@ -4,11 +4,19 @@
  <title>CHICAS News</title>
  <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
  <link>http://chicas.lancaster-university.uk/</link>
- <lastBuildDate>Wed, 10 Jan 2018 17:19:48 +0000</lastBuildDate>
- <pubDate>Wed, 10 Jan 2018 17:19:48 +0000</pubDate>
+ <lastBuildDate>Tue, 23 Jan 2018 11:25:54 +0000</lastBuildDate>
+ <pubDate>Tue, 23 Jan 2018 11:25:54 +0000</pubDate>
  <ttl>1800</ttl>
  
 
+
+
+ <item>
+  <title>RSS Awards for CHICAS Staff</title>
+  <description>Peter Diggle and Emanuele Giorgi awarded honours by the Royal Statistical Society for 2018.</description>
+  <link>http://chicas.lancaster-university.uk//news/rss_2018_honours.html</link>
+  <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+ </item>
 
 
  <item>
@@ -40,14 +48,6 @@
   <description>Barry Rowlingson will be advising a programming project in open-source GIS integration.</description>
   <link>http://chicas.lancaster-university.uk//news/gsoc_2017.html</link>
   <pubDate>Wed,  3 May 2017 00:00:00 +0000</pubDate>
- </item>
-
-
- <item>
-  <title>GBIF Young Researcher Award for CHICAS PhD Student</title>
-  <description>Juan Escamilla Mólgora wins &euro;4000 award for research into complex ecological community analysis.</description>
-  <link>http://chicas.lancaster-university.uk//news/juan_gbif_award.html</link>
-  <pubDate>Thu,  6 Oct 2016 00:00:00 +0000</pubDate>
  </item>
 
 
