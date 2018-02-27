@@ -4,11 +4,19 @@
  <title>CHICAS News</title>
  <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
  <link>http://chicas.lancaster-university.uk/</link>
- <lastBuildDate>Tue,  6 Feb 2018 17:05:30 +0000</lastBuildDate>
- <pubDate>Tue,  6 Feb 2018 17:05:30 +0000</pubDate>
+ <lastBuildDate>Tue, 27 Feb 2018 12:55:55 +0000</lastBuildDate>
+ <pubDate>Tue, 27 Feb 2018 12:55:55 +0000</pubDate>
  <ttl>1800</ttl>
  
 
+
+
+ <item>
+  <title>Peter Macharia Visit to CHICAS</title>
+  <description>Award-winning student Peter Macharia recently visited CHICAS from Kenya.</description>
+  <link>http://chicas.lancaster-university.uk//news/macharia.html</link>
+  <pubDate>Thu, 22 Feb 2018 00:00:00 +0000</pubDate>
+ </item>
 
 
  <item>
@@ -40,14 +48,6 @@
   <description>School student to experience the University research environment and make valuable scientific contributions.</description>
   <link>http://chicas.lancaster-university.uk//news/nuffield_student.html</link>
   <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
- </item>
-
-
- <item>
-  <title>CHICAS Researcher to Mentor Google Summer School Student</title>
-  <description>Barry Rowlingson will be advising a programming project in open-source GIS integration.</description>
-  <link>http://chicas.lancaster-university.uk//news/gsoc_2017.html</link>
-  <pubDate>Wed,  3 May 2017 00:00:00 +0000</pubDate>
  </item>
 
 
