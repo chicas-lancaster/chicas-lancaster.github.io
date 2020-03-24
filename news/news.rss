@@ -4,11 +4,19 @@
  <title>CHICAS News</title>
  <description>Latest Information from the CHICAS Stats/Epi group at Lancaster</description>
  <link>http://chicas.lancaster-university.uk/</link>
- <lastBuildDate>Wed,  4 Mar 2020 12:49:15 +0000</lastBuildDate>
- <pubDate>Wed,  4 Mar 2020 12:49:15 +0000</pubDate>
+ <lastBuildDate>Tue, 24 Mar 2020 14:30:21 +0000</lastBuildDate>
+ <pubDate>Tue, 24 Mar 2020 14:30:21 +0000</pubDate>
  <ttl>1800</ttl>
  
 
+
+
+ <item>
+  <title>COVID-19 Coronavirus Research</title>
+  <description>A number of CHICAS research staff and students are now devoting much of their research efforts to COVID-19-related activity. Our modelling activities are helping to advise and support pandemic response and decision making in the UK and internationally. You can read about our work on the <a href="/projects/covid_19.html">COVID-19</a> project page.</description>
+  <link>http://chicas.lancaster-university.uk//news/covid-19.html</link>
+  <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+ </item>
 
 
  <item>
@@ -40,14 +48,6 @@
   <description>Award-winning student Peter Macharia recently visited CHICAS from Kenya.</description>
   <link>http://chicas.lancaster-university.uk//news/macharia.html</link>
   <pubDate>Thu, 22 Feb 2018 00:00:00 +0000</pubDate>
- </item>
-
-
- <item>
-  <title>RSS Awards for CHICAS Staff</title>
-  <description>Peter Diggle and Emanuele Giorgi awarded honours by the Royal Statistical Society for 2018.</description>
-  <link>http://chicas.lancaster-university.uk//news/rss_2018_honours.html</link>
-  <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
  </item>
 
 
