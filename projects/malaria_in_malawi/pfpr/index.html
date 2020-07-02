@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>On the relationship between Plasmodium falciparum Prevalence and Entomological Inoculation Rate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="flipbook.js" ></script>   
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Header -->
+      <header class="header">
+	<h2>On the relationship between Plasmodium falciparum Prevalence and Entomological Inoculation Rate</h2>
+	<h3>Authors: Benjamin Amoah, Robert S. McCann, Alinune N. Kabaghe, MonicahMburu, Michael G. Chipeta, Paula Moraga, Steven Gowelo, TinasheTizifa, Henk van den Berg, Themba Mzilahowa, Willem Takken, Michele vanVugt, Kamija S. Phiri, Peter J. Diggle, Dianne J. Terlouw, Emanuele Giorgi</h3>
+      </header>
+
+      <div class="flex-container wrapper">
+	
+        <!-- Sidebar -->
+        <aside class="sidebar">
+	  <h2><span id="monthlabel"></span></h2>
+	  
+	  <p>
+	    <button
+	      id='bg-flipbook-play' type='button' value='&#x25b6;' style='font-size: 12px;'
+	      title='Play/Pause'
+	      >&#x25b6;</button>
+	    <button
+	      id='bg-flipbook-stop' type='button' value='&#x25a0;' style='font-size: 12px;'
+	      title='Stop and Reset'>&#x25a0;</button>
+	  </p>
+	  <p>
+	    <button
+	      id='bg-flipbook-step-b' type='button' value='&#x21E4;' style='font-size: 12px;'
+	      title='Step Backwards'>&#x21E4;</button>
+	    <button
+	      id='bg-flipbook-step-f' type='button' value='&#x21E5;' style='font-size: 12px;'
+	      title='Step Forwards'>&#x21E5;</button>
+	  </p>
+	  <p>
+	    Speed:
+	    <input
+	      id='bg-flipbook-fps' type='text'
+	      style='width: 4ex; font-size: 18px; text-align: right; min-height: 0;
+	      line-height: 1; padding: 0;'
+	      title='Set Playback Rate' value=3
+	      />
+	  </p>
+	  <p>
+	    <span id=bg-flipbook-frame-span>
+	      Month:
+	      <input
+		id='bg-flipbook-frame'
+		type='text'
+		style='width: 4ex; font-size: 18px; text-align: right; min-height: 0;
+		line-height: 1; padding: 0;'
+		value=1
+		title='(Jump to) frame #'
+		/> / <span id='bg-flipbook-frame-n'></span>
+	    </span>
+	  </p>
+	  <p>Loop
+	      <label title='Loop-play'>
+		<span
+		  id='bg-flipbook-loop-ind'
+		  style='font-size: 1.3em; font-weight: bold;'>&#x293E;</span>:
+		<input id='bg-flipbook-loop' value=1 type='checkbox' />
+	      </label>
+	  </p>
+	  <p>
+	    <button
+	      id='bg-flipbook-help' type='button' value='help' style='font-size: 18px;'
+	      title='Display help overlay'>help</button>
+	  </p>
+        </aside>
+	
+<!-- Content -->
+<section class="content">
+  <div id="bg-images"></div>
+  <div id='bg-flipbook-template' >
+    <div id='bg-flipbook-images' style='display: none'></div>
+    <div
+      id='bg-flipbook-container'
+      style='margin: auto; display: inline-block; max-width: 98%;'
+      >
+      <canvas
+	id='bg-flipbook-flipbook'
+	style='display: block; max-width: 100%;'
+	>
+	This is an HTML Canvas flipbook that displays key frames of an animation in a
+	more controllable manner than in a video player.  If you are reading this text
+	your browser does not support HTML Canvas.
+      </canvas>
+    </div>
+  </div>
+</section>	
+
+      </div>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+	  Top panels: Spatio-temporal maps of Plasmodium falciparum median entomological inoculation rate (PfEIR, left panel) and mean Plasmodium falciparum parasite prevalence (PfPR) for  children 0.5-5 y/o (middle panel) and  PfPR in women 14-49 y/o (right panel)  from the Majete Malaria Project in the Chikwawi District of Southern Malawi.
+	</p>
+	<p>
+           Bottom panels: Demarcated hotspots representing areas where EPfIR (left panel) exceeds 0.1 infective bites/person/month, PfPR in children 0.5-5 y/o (middle panel) exceeds 31%, and PfPR in women 14-49 y/o (right panel) exceeds 17%, all with probability of at least 0.9.
+        </p>
+      </footer>
+    </main>
+    
+    <script type='text/javascript'>
+  new BgFlipBook({
+      targetId: 'bg-images',
+      imgDir: 'imgs/',
+      imgStart: 1, imgEnd: 38,  imgPad: "00",
+      fps: 4, loop: true, loopDelay: 2000
+      })
+    </script>
+  </body>
+</html>
