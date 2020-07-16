@@ -15,6 +15,8 @@ body{
     color:#fff
 }
 
+h3 {font-weight: 10; font-size: 0.9rem}
+
 .wrapper{
     margin:auto;
     max-width:75rem
