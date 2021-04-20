@@ -101,6 +101,10 @@ function getArchived(root, wrapper, item, trim){
 function addEvents(URL, r, wrapper, item, trim, reverse){
     $.getJSON(URL , function(json) {
         $(r).empty();
+	// leave empty if no events
+	if (json.items.length == 0){
+	    return;
+	}
 	var events = json.items;
 	var list = templates[wrapper].clone();
 	$.each(events, function(){
