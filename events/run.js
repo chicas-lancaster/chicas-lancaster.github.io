@@ -32,6 +32,12 @@ function makedescription(event, max){
 
 };
 
+function wheresat(where){
+    if(where.startsWith("http")){
+	where = '<a href="'+where+'">Online</a>'
+    }
+    return(where)
+}
 
 function trimit(t, max){
     if(!t){ return ["", false] };
@@ -112,14 +118,14 @@ function addEvents(URL, r, wrapper, item, trim, reverse){
 	    var when = getWhen(this);
 	    var where;
 	    if(this.location){
-		where = this.location;
+		where = wheresat(this.location);
 	    }else{
 		where = " ";
 	    };
 	    var texttrim = makedescription(this, trim);
 	    e.find("a").text(this.summary).attr("href",this.htmlLink).end()
 		.find(".when").text(when).end()
-		.find(".where").text(where).end()
+		.find(".where").html(where).end()
 		.find(".description").text(texttrim[0]);
 	    if (texttrim[1]){
 		e.find(".description").append('...<a title="details" href="'+this.htmlLink+'">(more)</a>');
