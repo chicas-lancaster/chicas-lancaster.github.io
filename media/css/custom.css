@@ -263,3 +263,22 @@ p.quote {
     border-left: 5px solid #B5121B;
     padding-left: 0.5em;   
 }
+
+
+dl.personitems {
+    padding: 0.5em 0 0 0;
+  }
+dl.personitems dt {
+    float: left;
+    clear: left;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+dl.personitems dt::after {
+    content: ":";
+}
+dl.personitems dd {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
