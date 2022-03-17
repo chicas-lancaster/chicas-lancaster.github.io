@@ -43,7 +43,7 @@
 
   /* font-size: 14px; */
   body {
-    font-family: "Roboto", Georgia, "Times New Roman", Times, serif;
+      font-family: "helvetica", "arial","verdana","geneva","sans-serif";
     font-size: 87.5%;
     color: #444444;
   }
