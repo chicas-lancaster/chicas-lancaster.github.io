@@ -85,6 +85,13 @@ label span.tag:hover {
     padding-bottom: 1em;
 }
 
+#whocclogo {
+    margin-left: auto;
+    margin-right: auto;
+    height: 12em;
+    display: block;
+}
+
 img.newspic {
  border: 2px solid #CCCCCC;
  float: left;
