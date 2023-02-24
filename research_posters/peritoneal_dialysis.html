@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - About us</title>
+	<title>Lancaster Medical School - CHICAS - Survival and Serious Long Term Peritoneal Complications in Peritoneal Dialysis Patients</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 	<!-- (en) Add your meta data here -->
 	<!-- (de) Fuegen Sie hier ihre Meta-Daten ein -->
 
-	<meta name="description" content="All about the group and its work"/>
+	<meta name="description" content=""/>
 		
 	<link href="/media/css/flexible-grids.css" rel="stylesheet" type="text/css"/>
 	<!--[if lte IE 7]>
@@ -51,9 +51,9 @@
                 href="/index.html">
                 Home
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="CHICAS Information"
-                class="button white active home"
+                class="button white home"
                 href="/about.html">
                 About Us
             </a>
@@ -104,55 +104,48 @@
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
       
-<h2>Who are we?</h2>
-<p>
-The Centre for Health Informatics, Computing, and Statistics (CHICAS)
-is a group of staff, research associates, and postgraduate students in
-the Lancaster Medical School, part of the Faculty of Health and
-Medicine at Lancaster University. You can see our list of
-<a href="/people">current staff and students</a>.
-</p>
-<h2>What do we do?</h2>
-<p>
-Our research focus is on statistical and epidemiological methods and
-their implementation in open-source software. We have long-standing
-expertise in longitudinal, spatial and spatio-temporal methods, and
-growing expertise in infectious disease modelling, design of field
-studies, statistical genetics and computationally efficient methods
-for high-dimensional data.
-</p>
-<p>
-Our current teaching focus is on postgraduate and CPD courses at the
-intersection of statistics, epidemiology and health informatics.
-</p>
-<p>For more information on what we do, see:
-<ul>
-<li>our <a href="/projects">research projects</a></li>
-<li>our <a href="/research_posters">research posters</a></li>
-</ul>
-</p>
-<h2>Where do we apply this?</h2>
-<p>
-Our work has involved national and international partners, and has had impact
-across the globe. We have a special interest in the epidemiology of disease
-in developing countries. See our <a href="map.html">map</a> for more info.
-</p>
-<h2>Interesting Links</h2>
-<p>
-We have a set of <a href="spatialepi.html">external links</a> of interesting
-spatial epidemiology applications and disease maps produced by other groups.
-</p>
+<div id="seadragon-viewer" style="width:100%; height:600px;"></div>
+<script src="//openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+
+
+<script>
+  // If you like my work, please consider supporting it at https://www.patreon.com/iangilman
+
+var viewer = OpenSeadragon({
+    id: "seadragon-viewer",
+    springStiffness: 100,
+    showNavigator:  true,
+    navigatorPosition:   "TOP_RIGHT",
+    prefixUrl: "//openseadragon.github.io/openseadragon/images/",
+    tileSources:
+	{type: "image", url:"peritoneal_dialysis.webp"},
+
+});
+</script>
 
 
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
-            
-      			
       
+<h3>Survival and Serious Long Term Peritoneal Complications in Peritoneal Dialysis Patients</h3>
 
-          </div>
+<p>
+Peter Diggle
+</p>
+<p>
+Download as <a href="peritoneal_dialysis.ppt">.ppt</a>
+</p>
+<p>
+<em>Use mouse controls or icon buttons to zoom in.</em>
+</p>
+<p>
+<a href=".">Back to poster list</a>
+</p>
+
+
+    </div>
   </aside>
 </section>
     </div>
