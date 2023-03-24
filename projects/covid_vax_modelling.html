@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Lancaster Medical School - CHICAS - Simon Alderton</title>
+	<title>Lancaster Medical School - CHICAS - Global COVID-19 Vaccination Modelling</title>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,18 @@
 	<!-- (en) Add your meta data here -->
 	<!-- (de) Fuegen Sie hier ihre Meta-Daten ein -->
 
-	<meta name="description" content="Simon Alderton"/>
+	<meta name="description" content="Global modelling to assess the impacts of current and variant adapted vaccines in different demographics and seroprevalence worldwide."/>
 		
 	<link href="/media/css/flexible-grids.css" rel="stylesheet" type="text/css"/>
 	<!--[if lte IE 7]>
 	<link href="/media/css/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
+ <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to loca
+l if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+<script src="/media/js/libs/slimbox2.js"></script>
+<link rel="stylesheet" href="/media/css/slimbox/slimbox2.css" type="text/css" media="screen" />
 	<!--[if lt IE 9]>
 	<script src="../lib/html5shiv/html5shiv.js"></script>
 	<![endif]-->
@@ -57,15 +63,15 @@
                 href="/about.html">
                 About Us
             </a>
-        </li>        <li class="">
+        </li>        <li class="active">
             <a title="Projects"
-                class="button white projects"
+                class="button white active projects"
                 href="/projects">
                 Projects
             </a>
-        </li>        <li class="active">
+        </li>        <li class="">
             <a title="People"
-                class="button white active people"
+                class="button white people"
                 href="/people">
                 People
             </a>
@@ -103,239 +109,78 @@
             <section class="ym-grid linearize-level-1">
   <article class="ym-g66 ym-gl content">
     <div class="ym-gbox-left ym-clearfix">
-      <h2>Simon Alderton</h2>
+      <h2>Global COVID-19 Vaccination Modelling</h2>
 <p>
-<p>
-Simon’s research interests lie at the interface between geography,
-health, and computer science, with an emphasis on how people’s
-interactions with each other, and their environment, influence
-pathways of disease transmission. Having an undergraduate and
-masters-level background in physical geography, he completed his PhD
-in Complex System Simulation at the University of Southampton, with a
-view to gaining the technical skills in dynamic modelling required to
-simulate these relationships. Using agent-based modelling (ABM)
-techniques, Simon’s research projects include a fine-scale, highly
-detailed model of Rhodesian human African trypanosomiasis
-(rHAT/sleeping sickness) in Eastern Province Zambia, and an
-exploration of human behaviour as a contributory factor to
-anti-microbial resistance (AMR) in Uganda and Malawi. In addition to
-this core research, his social science background has led to an
-interest in the development of software tools that are accessible to
-researchers with no formal training in computational methods.
-</p><p>
- Away
-from university, Simon enjoys rugby, cue sports and has a strong
-affinity with the coast (although not as strong as his cockapoo,
- Jess!).
+The COVID-19 pandemic continues to generate high levels of severe
+disease worldwide. Many countries have still only been able to deliver
+very minimal vaccination, leaving large bodies of developing
+infection. Furthermore, even in those that have delivered effective
+vaccination campaigns, waning immunity coupled with a rapidly evolving
+virus means disease remains highly prevalent.
 </p>
+<p>
+In order to facilitate effective vaccination strategies in Low and
+Middle-Income Countries, the WHO’s SAGE Working Group on COVID-19
+Vaccines released a request for focused modelling work to address
+uncertainties surrounding epidemiological, Social and Economic Impact
+scenarios of COVID-19 vaccination strategies. This project was
+developed in response to this call, with the aim to address the
+following 5 objectives:
+</p>
+<ol>
+  <li>Shifting vaccination priorities with high infection-derived immunity.
+    <ul>
+      <li>If the focus is to prevent severe disease and death, which use groups should be prioritised for vaccination in high seroprevalence settings (and which use groups would derive relatively little benefit from vaccination)?</li>
+      <li>What serological data are needed to formulate a serology-informed national policy on
+	vaccination?</li>
+    </ul>
+  </li>
+  <li>Cost-effectiveness of COVID-19 vaccines (compared to other vaccines).
+    <ul>
+      <li>For yet (largely) unvaccinated LMICs, in which use groups would vaccination be cost effective?</li>
+      <li>For well vaccinated countries, in which use groups would a fourth/fifth dose in Autumn 2022 (or annually) be cost-effective?</li>
+    </ul>
+  </li>
+  <li>Impact of Variants of Concern (VoC) on vaccination priorities.
+    <ul>
+      <li>What profile would a VoC have to warrant (re-)vaccination with current vaccines as an “insurance policy”, and which use groups should be prioritised for this?</li>
+      <li>What profile would a VoC have to have to warrant reactive (re-)vaccination with current vaccines in response to a surge in cases?</li>
+      <li>What profile would a VoC have to have to warrant (re-)vaccination with vaccines including new variants or a broadly protective vaccine?</li>
+    </ul>
+  </li>
+  <li>What would be the increased public health impact of a variant-adapted booster compared to boosting with current vaccines?
+    <ul>
+      <li>How does the public health impact achieved through variant-adapted vaccines versus current vaccines vary in populations with different levels of infection- versus vaccine induced seroprevalence?</li>
+      <li>What would be the optimal vaccination strategies (for reducing severe disease and for reducing infection rates), e.g. targeting high priority-use groups vs universal boosting, to achieve maximum public health impact?</li>
+    </ul>
+  </li>
+  <li>Under what assumptions about vaccine and variant characteristics would it be cost effective to switch to variant adapted vaccines for boosting?
+    <ul>
+      <li>How does the effectiveness of a variant adapted vaccine compare to using original
+	vaccines, and how does this depend on vaccine and variant characteristics?</li>
+    </ul>
+  </li>
+</ul> 
 
-</p>
     </div>
   </article>
   <aside class="ym-g33 ym-gr">
     <div class="ym-gbox-right ym-clearfix">
+                  <h2>People</h2>
+            <ul>
+			<li><a href="/people/moores.html">Sam Moore</a></li>
+	      </ul>
       
-
-<div class="profilepic">
-<img src="/media/images/people/profile_alderton.jpg">
-</div>
-
-<dl class="personitems">
-<dt>Email</dt><dd><a href="mailto:s.alderton@lancaster.ac.uk">s.alderton@lancaster.ac.uk</a></dd>
-
-<dt>Orcid</dt><dd><a href="http://orcid.org/0000-0001-5645-2338">0000-0001-5645-2338</a></dd>
-
-<dt>Research Portal</dt><dd><a href="http://www.research.lancs.ac.uk/portal/en/people/simon-alderton(f526a012-fb47-447e-aa89-8bd0506191d5)/publications.html">Publications</a></dd>
-
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Current Projects</h2>
-<ul>
-<li><a href="/projects/drum.html">DRUM</a></li>
-<li><a href="/projects/covid_19.html">COVID-19 Research</a></li>
-</ul>
-
-
-
+      			
+      
 <h2>Links</h2>
 <ul>
 <li>
-<a href="http://simonalderton.com/">My Personal Website</a>
+<a href="https://www.who.int/groups/strategic-advisory-group-of-experts-on-immunization">WHO Strategic Advisory Group of Experts on Immunization (SAGE)</a>
 </li>
+</ul>
 
-    </div>
+          </div>
   </aside>
 </section>
     </div>
