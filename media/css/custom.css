@@ -72,6 +72,7 @@ label span.tag:hover {
 }
 
 .pagepic img {
+    width: 100%;
     border: 1px solid #CCCCCC;
     vertical-align:middle;
     margin-bottom: 3px; 
@@ -288,4 +289,110 @@ dl.personitems dt::after {
 dl.personitems dd {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+}
+
+div.personbox {
+    display: inline-block;
+}
+
+div.profilepic {
+    margin: 1em auto 0.5em auto;
+    width: 5em;
+}
+
+div.profilepic img {
+    border-radius: 25%;
+    width: 100%;
+}
+
+div.profilename {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+div.peoplelist {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+}
+
+
+
+.projectgrid  {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+input[type='checkbox'] {
+  display: none;
+}
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+
+  padding: 1rem;
+  color: #b5121b;	
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+.collapsible-content .content-inner {
+
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+
+  transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.themebox {
+    border: 1px solid #b5121b;
+    border-bottom-right-radius: 4em;
+    margin: 0 1em 1em 0;
+    padding: 0 1em 0 1em;
+    width: 20em;
+}
+p.description { font-style: italic; color: black}
+div.themepic {width: 100%}
+div.themes {
+    display: flex;
+    flex-wrap: wrap;
 }
