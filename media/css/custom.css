@@ -396,3 +396,17 @@ div.themes {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* fixes <detail><summary>... items to show the dropdown */
+summary {
+    display: list-item;
+}
+
+figcaption {
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
